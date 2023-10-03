@@ -1,0 +1,36 @@
+{
+  "unpublishedCollection": {
+    "name": "apis",
+    "pageId": "KREAd Market Characters",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "dataPath",
+        "value": "(\"/custom/vstorage/data/published.kread.market-characters.\").concat(tbl_wallets.selectedRow.character)"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      },
+      {
+        "name": "height",
+        "value": "1"
+      },
+      {
+        "name": "walletId",
+        "value": "\"1\""
+      },
+      {
+        "name": "slash",
+        "value": "\"\\\\\""
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "KREAd Market Characters_apis",
+  "deleted": false,
+  "gitSyncId": "650ebdc3f3d421401941b61d_651a97ca6d4ce8695a34ca07"
+}

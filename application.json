@@ -1,0 +1,83 @@
+{
+  "pages": [
+    {
+      "id": "Wallets",
+      "isDefault": true
+    },
+    {
+      "id": "Vaults",
+      "isDefault": false
+    },
+    {
+      "id": "Wallets Old",
+      "isDefault": false
+    },
+    {
+      "id": "Dashboard",
+      "isDefault": false
+    },
+    {
+      "id": "Orders",
+      "isDefault": false
+    },
+    {
+      "id": "Products",
+      "isDefault": false
+    },
+    {
+      "id": "KREAd Item",
+      "isDefault": false
+    },
+    {
+      "id": "KREAd Market Items",
+      "isDefault": false
+    },
+    {
+      "id": "KREAd Characters",
+      "isDefault": false
+    },
+    {
+      "id": "KREAd Market Characters",
+      "isDefault": false
+    },
+    {
+      "id": "Bundles",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "unpublishedApplicationDetail": {
+    "navigationSetting": {
+      "showNavbar": true,
+      "orientation": "side",
+      "navStyle": "sidebar",
+      "position": "static",
+      "itemStyle": "text",
+      "colorStyle": "theme",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "showSignIn": false
+    }
+  },
+  "color": "#C7F3E3",
+  "icon": "medical",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "publishedAppLayout": {
+    "type": "FLUID"
+  },
+  "unpublishedCustomJSLibs": [
+    {
+      "uidString": "JsonViewer_https://cdn.jsdelivr.net/npm/@textea/json-viewer@3.1.1/dist/browser.min.js"
+    }
+  ],
+  "publishedCustomJSLibs": [],
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "isManualUpdate": false,
+  "deleted": false
+}

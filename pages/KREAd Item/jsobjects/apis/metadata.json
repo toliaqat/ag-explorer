@@ -1,0 +1,36 @@
+{
+  "unpublishedCollection": {
+    "name": "apis",
+    "pageId": "KREAd Item",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "dataPath",
+        "value": "\"/custom/vstorage/data/published.kread.item\""
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      },
+      {
+        "name": "height",
+        "value": "1"
+      },
+      {
+        "name": "walletId",
+        "value": "\"1\""
+      },
+      {
+        "name": "slash",
+        "value": "\"\\\\\""
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "KREAd Item_apis",
+  "deleted": false,
+  "gitSyncId": "650ebdc3f3d421401941b61d_651a938887b62b13128cd2db"
+}

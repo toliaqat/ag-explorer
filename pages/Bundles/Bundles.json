@@ -1,0 +1,81 @@
+{
+  "unpublishedPage": {
+    "name": "Bundles",
+    "slug": "bundles",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1100,
+          "containerStyle": "none",
+          "snapRows": 99,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 86,
+          "minHeight": 1010,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Bundles_getReturns",
+              "name": "getReturns",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "(tbl_wallets.pageNo - 1) * tbl_wallets.pageSize",
+                "tbl_wallets.pageSize"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Bundles_apis.getRpcWalletData",
+              "name": "apis.getRpcWalletData",
+              "collectionId": "Bundles_apis",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  showModal('Modal1');\n  resetWidget(\"tbl_walletsData\", true);\n  if (tbl_wallets.tableData.length < 1) {\n    closeModal('Modal1');\n    return [];\n  }\n  if (tbl_wallets.selectedRowIndex < 0) {\n    closeModal('Modal1');\n    return [];\n  }\n  apis.dataPath = (\"/custom/vstorage/data/published.wallet.\").concat(tbl_wallets.selectedRow.wallet).concat(\".current\");\n  let response = await RpcGetWalletDataAPI.run();\n  if (response.result.response.value === null) {\n    closeModal('Modal1');\n    return [{\n      \"value\": response.result.response.log\n    }];\n  }\n  apis.height = response.result.response.height;\n  let data = response.result.response.value && JSON.parse(atob(response.result.response.value));\n  let result = JSON.parse(data.value).values.map(v => ({\n    value: apis.cleanTxt(v)\n  })).map(kv => ({\n    \"value\": kv.value\n  }));\n  closeModal('Modal1');\n  return result;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Bundles_apis.getRpcWallets",
+              "name": "apis.getRpcWallets",
+              "collectionId": "Bundles_apis",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  if (searchInput.text.length > 0) {\n    return [{\n      wallet: searchInput.text\n    }];\n  }\n  let response = await RpcGetWalletApi.run();\n  apis.height = response.result.response.height;\n  let children = response.result.response.value && JSON.parse(atob(response.result.response.value)).children;\n  return children.map(v => ({\n    wallet: v\n  }));\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Bundles",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "650ebdc3f3d421401941b61d_651b0b84338bcc55ca3b16e1"
+}

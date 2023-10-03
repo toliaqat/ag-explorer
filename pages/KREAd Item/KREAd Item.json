@@ -1,0 +1,70 @@
+{
+  "unpublishedPage": {
+    "name": "KREAd Item",
+    "slug": "kread-item",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1100,
+          "containerStyle": "none",
+          "snapRows": 99,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 86,
+          "minHeight": 1010,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "KREAd Item_getReturns",
+              "name": "getReturns",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "(tbl_wallets.pageNo - 1) * tbl_wallets.pageSize",
+                "tbl_wallets.pageSize"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "KREAd Item_apis.getRpcWalletData",
+              "name": "apis.getRpcWalletData",
+              "collectionId": "KREAd Item_apis",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  showModal('Modal1');\n  apis.dataPath = \"/custom/vstorage/data/published.kread.item\";\n  console.log(apis.dataPath);\n  let response = await RpcGetWalletDataAPI.run();\n  console.log(response);\n  if (response.result.response.value === null) {\n    closeModal('Modal1');\n    return [{\n      \"value\": response.result.response.log\n    }];\n  }\n  apis.height = response.result.response.height;\n  let data = response.result.response.value && JSON.parse(atob(response.result.response.value));\n  let result = JSON.parse(data.value).values.map(v => ({\n    value: apis.cleanTxt(v)\n  })).map(kv => ({\n    \"value\": kv\n  }));\n  closeModal('Modal1');\n  return result;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "KREAd Item",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "650ebdc3f3d421401941b61d_651a938887b62b13128cd2c9"
+}

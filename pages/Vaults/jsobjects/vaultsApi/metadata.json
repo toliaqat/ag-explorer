@@ -1,0 +1,36 @@
+{
+  "unpublishedCollection": {
+    "name": "vaultsApi",
+    "pageId": "Vaults",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "dataPath",
+        "value": "\"/custom/vstorage/data/published.vaultFactory.managers.manager0.vaults.vault0\""
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      },
+      {
+        "name": "height",
+        "value": "1"
+      },
+      {
+        "name": "walletId",
+        "value": "\"1\""
+      },
+      {
+        "name": "slash",
+        "value": "\"\\\\\""
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Vaults_vaultsApi",
+  "deleted": false,
+  "gitSyncId": "650ebdc3f3d421401941b61d_6510fe34215ae274c77f7e40"
+}

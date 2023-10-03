@@ -53,5 +53,16 @@ export default {
 		let children = response.result.response.value && JSON.parse(atob(response.result.response.value)).children;
 
 		return children.map(v => ({wallet: v}));
+	},
+	
+	async pageLoad() {
+		if (appsmith.URL.queryParams.walletId != undefined && appsmith.URL.queryParams.walletId != null) {
+			searchInput.setValue(appsmith.URL.queryParams.walletId);
+		}
+		
+		if (appsmith.URL.queryParams.network != undefined && appsmith.URL.queryParams.network != null) {
+			networkInput.setSelectedOption(appsmith.URL.queryParams.network);
+		}
+			
 	}
 }

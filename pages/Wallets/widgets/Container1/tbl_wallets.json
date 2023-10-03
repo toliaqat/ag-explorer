@@ -1,10 +1,11 @@
 {
     "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+    "multiRowSelection": false,
     "isVisibleDownload": true,
     "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
     "topRow": 1,
     "isSortable": true,
-    "onPageChange": "{{utils.getReturns()}}",
+    "onPageChange": "{{showAlert('Test', '');}}",
     "type": "TABLE_WIDGET_V2",
     "inlineEditingSaveOption": "ROW_LEVEL",
     "animateLoading": true,
@@ -59,10 +60,7 @@
     "widgetName": "tbl_wallets",
     "defaultPageSize": 0,
     "columnOrder": ["wallet"],
-    "dynamicPropertyPathList": [
-        {"key": "tableData"},
-        {"key": "onRowSelected"}
-    ],
+    "dynamicPropertyPathList": [{"key": "tableData"}],
     "compactMode": "DEFAULT",
     "displayName": "Table",
     "bottomRow": 107,
@@ -130,7 +128,7 @@
         "cellBackground": "",
         "verticalAlignment": "CENTER"
     }},
-    "onRowSelected": "{{\napis.getRpcWalletData();}}",
+    "onRowSelected": "{{navigateTo('Wallets', {\n  \"walletId\": tbl_wallets.selectedRow.wallet,\n  \"network\": networkInput.selectedOptionValue\n}, 'SAME_WINDOW');\nnavigateTo('', {\n  \"walletId\": tbl_wallets.selectedRow.wallet,\n  \"network\": networkInput.selectedOptionLabel\n}, 'SAME_WINDOW');\napis.getRpcWalletData();}}",
     "key": "361c7eqfhn",
     "canFreezeColumn": false,
     "isDeprecated": false,

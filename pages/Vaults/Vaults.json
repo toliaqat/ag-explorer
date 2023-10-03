@@ -28,19 +28,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Vaults_vaultsApi.getRpcWallets",
-              "name": "vaultsApi.getRpcWallets",
-              "collectionId": "Vaults_vaultsApi",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async function () {\n  let response = await RpcGetWalletApi.run();\n  vaultsApi.height = response.result.response.height;\n  let children = response.result.response.value && JSON.parse(atob(response.result.response.value)).children;\n  return children.map(v => ({\n    vault: v\n  }));\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Vaults_vaultsApi.getRpcWalletData",
               "name": "vaultsApi.getRpcWalletData",
               "collectionId": "Vaults_vaultsApi",
@@ -48,6 +35,17 @@
               "pluginType": "JS",
               "jsonPathKeys": [
                 "async function () {\n  showModal('Modal1');\n  if (tbl_wallets.tableData.length < 1) {\n    closeModal('Modal1');\n    return [];\n  }\n  if (tbl_wallets.selectedRowIndex < 0) {\n    closeModal('Modal1');\n    return [];\n  }\n  vaultsApi.dataPath = (\"/custom/vstorage/data/published.vaultFactory.managers.manager0.vaults.\").concat(tbl_wallets.selectedRow.vault);\n  let response = await RpcGetWalletDataAPI.run();\n  closeModal('Modal1');\n  vaultsApi.height = response.result.response.height;\n  let data = response.result && response.result.response && response.result.response.value && JSON.parse(atob(response.result.response.value));\n  let result = JSON.parse(data.value).values.map(v => ({\n    value: vaultsApi.cleanTxt(v)\n  })).map(kv => ({\n    \"value\": kv.value.body\n  }));\n  return result;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Vaults_vaultsApi.getRpcWallets",
+              "name": "vaultsApi.getRpcWallets",
+              "collectionId": "Vaults_vaultsApi",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  let response = await RpcGetWalletApi.run();\n  vaultsApi.height = response.result.response.height;\n  let children = response.result.response.value && JSON.parse(atob(response.result.response.value)).children;\n  return children.map(v => ({\n    vault: v\n  }));\n}"
               ],
               "timeoutInMillisecond": 10000
             }

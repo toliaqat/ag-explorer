@@ -35,7 +35,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async function () {\n  if (appsmith.URL.queryParams.walletId != undefined && appsmith.URL.queryParams.walletId != null) {\n    searchInput.setValue(appsmith.URL.queryParams.walletId);\n  }\n  if (appsmith.URL.queryParams.network != undefined && appsmith.URL.queryParams.network != null) {\n    networkInput.setSelectedOption(appsmith.URL.queryParams.network);\n  }\n}"
+                "async function () {\n  if (appsmith.URL.queryParams.walletId != undefined && appsmith.URL.queryParams.walletId != null) {\n    searchInput.setValue(appsmith.URL.queryParams.walletId);\n  }\n  if (appsmith.URL.queryParams.network != undefined && appsmith.URL.queryParams.network != null) {\n    networkInput.setSelectedOption(appsmith.URL.queryParams.network);\n  }\n  apis.getRpcWalletData();\n}"
               ],
               "timeoutInMillisecond": 10000
             },
@@ -59,7 +59,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async function () {\n  showModal('Modal1');\n  resetWidget(\"tbl_walletsData\", true);\n  if (tbl_wallets.tableData.length < 1) {\n    closeModal('Modal1');\n    return [];\n  }\n  if (tbl_wallets.selectedRowIndex < 0) {\n    closeModal('Modal1');\n    return [];\n  }\n  apis.dataPath = (\"/custom/vstorage/data/published.wallet.\").concat(tbl_wallets.selectedRow.wallet).concat(\".current\");\n  let response = await RpcGetWalletDataAPI.run();\n  if (response.result.response.value === null) {\n    closeModal('Modal1');\n    return [{\n      \"value\": response.result.response.log\n    }];\n  }\n  apis.height = response.result.response.height;\n  let data = response.result.response.value && JSON.parse(atob(response.result.response.value));\n  let result = JSON.parse(data.value).values.map(v => ({\n    value: apis.cleanTxt(v)\n  })).map(kv => ({\n    \"value\": kv.value\n  }));\n  closeModal('Modal1');\n  return result;\n}"
+                "async function () {\n  showModal('Modal1');\n  resetWidget(\"tbl_walletsData\", true);\n  if (tbl_wallets.tableData.length < 1) {\n    closeModal('Modal1');\n    return [];\n  }\n  if (tbl_wallets.selectedRowIndex < 0) {\n    closeModal('Modal1');\n    return [];\n  }\n  if (appsmith.URL.queryParams.walletId != undefined && appsmith.URL.queryParams.walletId != null) {\n    apis.dataPath = (\"/custom/vstorage/data/published.wallet.\").concat(appsmith.URL.queryParams.walletId).concat(\".current\");\n  } else {\n    apis.dataPath = (\"/custom/vstorage/data/published.wallet.\").concat(tbl_wallets.selectedRow.wallet).concat(\".current\");\n  }\n  let response = await RpcGetWalletDataAPI.run();\n  if (response.result.response.value === null) {\n    closeModal('Modal1');\n    return [{\n      \"value\": response.result.response.log\n    }];\n  }\n  apis.height = response.result.response.height;\n  let data = response.result.response.value && JSON.parse(atob(response.result.response.value));\n  let result = JSON.parse(data.value).values.map(v => ({\n    value: apis.cleanTxt(v)\n  })).map(kv => ({\n    \"value\": kv.value\n  }));\n  closeModal('Modal1');\n  return result;\n}"
               ],
               "timeoutInMillisecond": 10000
             },

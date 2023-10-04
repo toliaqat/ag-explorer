@@ -128,7 +128,7 @@
         "cellBackground": "",
         "verticalAlignment": "CENTER"
     }},
-    "onRowSelected": "{{navigateTo('Wallets', {\n  \"walletId\": tbl_wallets.selectedRow.wallet,\n  \"network\": networkInput.selectedOptionValue\n}, 'SAME_WINDOW');\nnavigateTo('', {\n  \"walletId\": tbl_wallets.selectedRow.wallet,\n  \"network\": networkInput.selectedOptionLabel\n}, 'SAME_WINDOW');\napis.getRpcWalletData();}}",
+    "onRowSelected": "{{navigateTo('Wallets', {\n  \"walletId\": tbl_wallets.selectedRow.wallet,\n  \"network\": networkInput.selectedOptionValue\n}, 'SAME_WINDOW');\nnavigateTo('', {\n  \"walletId\": tbl_wallets.selectedRow.wallet,\n  \"network\": networkInput.selectedOptionValue\n}, 'SAME_WINDOW');\napis.getRpcWalletData();}}",
     "key": "361c7eqfhn",
     "canFreezeColumn": false,
     "isDeprecated": false,

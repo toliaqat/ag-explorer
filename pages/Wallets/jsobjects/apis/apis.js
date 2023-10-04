@@ -24,7 +24,12 @@ export default {
 			return [];
 		}
 
-		this.dataPath = "/custom/vstorage/data/published.wallet.".concat(tbl_wallets.selectedRow.wallet).concat(".current");
+		if (appsmith.URL.queryParams.walletId != undefined && appsmith.URL.queryParams.walletId != null) {
+			this.dataPath = "/custom/vstorage/data/published.wallet.".concat(appsmith.URL.queryParams.walletId).concat(".current");
+		} else {
+			this.dataPath = "/custom/vstorage/data/published.wallet.".concat(tbl_wallets.selectedRow.wallet).concat(".current");
+		}
+		
 
 		let response = await RpcGetWalletDataAPI.run();
 		if (response.result.response.value === null) {
@@ -63,6 +68,8 @@ export default {
 		if (appsmith.URL.queryParams.network != undefined && appsmith.URL.queryParams.network != null) {
 			networkInput.setSelectedOption(appsmith.URL.queryParams.network);
 		}
-			
+		
+		this.getRpcWalletData();
+
 	}
 }

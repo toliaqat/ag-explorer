@@ -24,13 +24,18 @@ export default {
 			return [];
 		}
 
-		if (appsmith.URL.queryParams.walletId != undefined && appsmith.URL.queryParams.walletId != null) {
-			this.dataPath = "/custom/vstorage/data/published.wallet.".concat(appsmith.URL.queryParams.walletId).concat(".current");
+		if (tbl_wallets.selectedRowIndices < 0) {
+			if (appsmith.URL.queryParams.walletId != undefined && appsmith.URL.queryParams.walletId != null) {
+				this.dataPath = "/custom/vstorage/data/published.wallet.".concat(appsmith.URL.queryParams.walletId).concat(".current");
+			}
 		} else {
 			this.dataPath = "/custom/vstorage/data/published.wallet.".concat(tbl_wallets.selectedRow.wallet).concat(".current");
 		}
-		
 
+		console.log(appsmith.URL.queryParams.walletId);
+		console.log(tbl_wallets.selectedRow.wallet);
+		console.log(this.dataPath);
+		
 		let response = await RpcGetWalletDataAPI.run();
 		if (response.result.response.value === null) {
 			closeModal('Modal1');

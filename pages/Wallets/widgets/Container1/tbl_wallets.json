@@ -131,7 +131,7 @@
         "cellBackground": "",
         "verticalAlignment": "CENTER"
     }},
-    "onRowSelected": "{{\n\nnavigateTo('Wallets', {\n  \"walletId\": tbl_wallets.selectedRow.wallet,\n  \"network\": networkInput.selectedOptionValue\n}, 'SAME_WINDOW');\n}}",
+    "onRowSelected": "{{apis.getRpcWalletData();\nnavigateTo('Wallets', {\n  \"walletId\": tbl_wallets.selectedRow.wallet,\n  \"network\": networkInput.selectedOptionValue\n}, 'SAME_WINDOW');}}",
     "key": "361c7eqfhn",
     "canFreezeColumn": false,
     "isDeprecated": false,

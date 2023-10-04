@@ -38,17 +38,6 @@
                 "async function () {\n  if (appsmith.URL.queryParams.walletId != undefined && appsmith.URL.queryParams.walletId != null) {\n    searchInput.setValue(appsmith.URL.queryParams.walletId);\n  }\n  if (appsmith.URL.queryParams.network != undefined && appsmith.URL.queryParams.network != null) {\n    networkInput.setSelectedOption(appsmith.URL.queryParams.network);\n  }\n  apis.getRpcWalletData();\n}"
               ],
               "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Wallets_getReturns",
-              "name": "getReturns",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "(tbl_wallets.pageNo - 1) * tbl_wallets.pageSize",
-                "tbl_wallets.pageSize"
-              ],
-              "timeoutInMillisecond": 10000
             }
           ],
           [

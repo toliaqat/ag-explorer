@@ -14,7 +14,7 @@
     ],
     "labelStyle": "",
     "inputType": "TEXT",
-    "placeholderText": "Bundle Id",
+    "placeholderText": "Tx Id",
     "isDisabled": false,
     "isRequired": false,
     "dynamicHeight": "FIXED",

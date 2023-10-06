@@ -24,11 +24,18 @@ export default {
 		return `
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.64.0/codemirror.min.css">
 				
-			    <textarea id="code" name="code" width="100%" height="800px">function myScript() {
+					<h4 style="color:#191919;font-family:sans-serif">Extracted from the bundle</h4>
+			    <textarea id="codeFromBundle" name="code" style="border:solid 1px grey;">function myScript() {
+							return 100;
+					}
+					
+					</textarea>
+					<h4 style="color:#191919;font-family:sans-serif;">Github view</h4>
+			    <textarea id="codeFromGithub" name="code" style="border:solid 1px grey;">function myScript() {
 							return 100;
 					}
 					</textarea>
-
+					
 			    <script src="https://cdn.jsdelivr.net/npm/zip-loader@1.2.0/dist/zip-loader.min.js"></script>
 					
 					<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.64.0/codemirror.min.js"></script>
@@ -157,13 +164,17 @@ export default {
 							console.log("Done $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 			      });
 
-						// Initialize CodeMirror
-						var myCodeMirror = CodeMirror.fromTextArea(document.getElementById("code"), {
+
+						var codeFromBundle = CodeMirror.fromTextArea(document.getElementById("codeFromBundle"), {
 							lineNumbers: true,
 							mode: "javascript"
 						});
-						
-						 myCodeMirror.setSize("100%", "960px");
+						var codeFromGithub = CodeMirror.fromTextArea(document.getElementById("codeFromGithub"), {
+							lineNumbers: true,
+							mode: "javascript"
+						});
+						 codeFromBundle.setSize("100%", "460px");
+						 codeFromGithub.setSize("100%", "460px");
 						
 					   window.addEventListener('message', (event) => {
 						 		console.log(event.data);
@@ -173,12 +184,15 @@ export default {
 									let code = githubCode(url).then(res => {
 										return res.text();	
 									}).then(text => {
-										myCodeMirror.setValue(text);
+										codeFromGithub.setValue(text);
 										//myCodeMirror.setValue(js_beautify(text));
 									});
-									console.log(code);
 									
-									//myCodeMirror.setValue(js_beautify(loader.extractAsText(event.data.file)));
+									const fileText = JSON.parse(loader.extractAsText(event.data.file));
+									
+									const txt = fileText.__syncModuleProgram__;
+									
+									codeFromBundle.setValue(js_beautify(txt));
 								} else if (event.data.data != undefined) {
 									explore(event.data.data).then(r => {
 									  console.log("Got data event $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");

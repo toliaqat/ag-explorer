@@ -17,6 +17,7 @@ export default {
 		let s = {data: response.tx.body.messages[0].compressed_bundle};
 		console.log(s);
 		postWindowMessage(s, 'Iframe1', "*");
+		//<h4 style="color:#191919;font-family:sans-serif;">Github view</h4>
 		//return this.data;
 	},
 	async getJSONPage() {
@@ -24,16 +25,14 @@ export default {
 		return `
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.64.0/codemirror.min.css">
 				
-					<h4 style="color:#191919;font-family:sans-serif">Extracted from the bundle</h4>
-			    <textarea id="codeFromBundle" name="code" style="border:solid 1px grey;">function myScript() {
-							return 100;
-					}
+					<p style="color:#191919;font-family:sans-serif">Extracted from the bundle</p>
+			    <textarea id="codeFromBundle" name="code" style="border:solid 1px grey;">
 					
 					</textarea>
-					<h4 style="color:#191919;font-family:sans-serif;">Github view</h4>
-			    <textarea id="codeFromGithub" name="code" style="border:solid 1px grey;">function myScript() {
-							return 100;
-					}
+					
+					
+					<a id="githublink" href="url" style="color:#191919;font-family:sans-serif;">Github view</a>
+			    <textarea id="codeFromGithub" name="code" style="border:solid 1px grey;">
 					</textarea>
 					
 			    <script src="https://cdn.jsdelivr.net/npm/zip-loader@1.2.0/dist/zip-loader.min.js"></script>
@@ -130,10 +129,13 @@ export default {
 									let realPackage = packageNames[package] || package;
 									let filePart = parts.slice(2).join('/');
 									let version = parts[1].split('-v').slice(1).join('-');
-									return \`https://raw.githubusercontent.com/Agoric/agoric-sdk/%40agoric/\${package}%40\${version}/packages/\${realPackage}/\${filePart}\`
-									//https://raw.githubusercontent.com/Agoric/agoric-sdk/%40agoric/ertp%400.16.3-u11wf.0/packages/ERTP/src/types-ambient.js
-									//https://raw.githubusercontent.com/Agoric/agoric-sdk/%40agoric/ertp%400.16.3-u11wf.0/packages/ertp/src/TYPES-ambient.js
+									const finalUrl = \`https://raw.githubusercontent.com/Agoric/agoric-sdk/%40agoric/\${package}%40\${version}/packages/\${realPackage}/\${filePart}\`;
+									var urlElement = document.getElementById('githublink');
 									
+									urlElement.setAttribute('href', finalUrl);
+ 
+									return finalUrl;
+							
 								}
 								
 							} else if (filename.startsWith("@endo/")) {
@@ -145,10 +147,11 @@ export default {
 										let realPackage = packageNames[package] || package;
 										let filePart = parts.slice(2).join('/');
 										let version = parts[1].split('-v').slice(1).join('-');
-										return \`https://raw.githubusercontent.com/endojs/endo/%40endo/\${package}%40\${version}/packages/\${realPackage}/\${filePart}\`
-										//https://raw.githubusercontent.com/Agoric/agoric-sdk/%40agoric/ertp%400.16.3-u11wf.0/packages/ERTP/src/types-ambient.js
-										//https://raw.githubusercontent.com/endojs/endo/%40endo/ertp%400.16.3-u11wf.0/packages/ertp/src/TYPES-ambient.js
-
+										const finalUrl = \`https://raw.githubusercontent.com/endojs/endo/%40endo/\${package}%40\${version}/packages/\${realPackage}/\${filePart}\`;
+										var urlElement = document.getElementById('githublink');
+ 										urlElement.setAttribute('href', finalUrl);
+ 
+										return finalUrl;
 									}
 							}
 							return undefined;

@@ -31,7 +31,10 @@
     "originalBottomRow": 14,
     "mobileBottomRow": 9,
     "widgetName": "searchInput",
-    "dynamicPropertyPathList": [{"key": "onSubmit"}],
+    "dynamicPropertyPathList": [
+        {"key": "onSubmit"},
+        {"key": "onTextChanged"}
+    ],
     "displayName": "Input",
     "searchTags": [
         "form",
@@ -45,10 +48,14 @@
     "hideCard": false,
     "mobileRightColumn": 41,
     "parentColumnSpace": 43.828125,
-    "dynamicTriggerPathList": [{"key": "onSubmit"}],
+    "dynamicTriggerPathList": [
+        {"key": "onSubmit"},
+        {"key": "onTextChanged"}
+    ],
     "labelPosition": "Left",
     "key": "z3l3ngze4u",
     "labelTextSize": "0.875rem",
+    "onTextChanged": "{{\napis.getBundleData();\napis.getJSONPage();\n}}",
     "isDeprecated": false,
     "rightColumn": 63,
     "widgetId": "63lqvyuqtw",

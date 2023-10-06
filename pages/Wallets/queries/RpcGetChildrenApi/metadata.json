@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "RpcGetWalletApi",
+    "name": "RpcGetChildrenApi",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -64,9 +64,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-09-24T23:58:11Z"
+    "createdAt": "2023-10-04T06:56:05Z"
   },
-  "id": "Wallets_RpcGetWalletApi",
+  "id": "Wallets_RpcGetChildrenApi",
   "deleted": false,
   "gitSyncId": "650ebdc3f3d421401941b61d_6510cd13e32fe02e1734bae6"
 }

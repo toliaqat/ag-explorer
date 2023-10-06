@@ -2,11 +2,11 @@
     "boxShadow": "none",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a7b19dc8b31d68fcff57f1d2c0084a18.svg",
     "labelText": "",
-    "topRow": 5,
+    "topRow": 0,
     "labelWidth": "3",
     "type": "SELECT_WIDGET",
     "serverSideFiltering": false,
-    "defaultOptionValue": "https://main.rpc.agoric.net/",
+    "defaultOptionValue": "https://main.api.agoric.net/",
     "animateLoading": true,
     "leftColumn": 1,
     "dynamicBindingPathList": [
@@ -33,18 +33,19 @@
     "dynamicPropertyPathList": [
         {"key": "sourceData"},
         {"key": "optionLabel"},
-        {"key": "optionValue"}
+        {"key": "optionValue"},
+        {"key": "onOptionChange"}
     ],
     "displayName": "Select",
     "searchTags": ["dropdown"],
-    "bottomRow": 9,
+    "bottomRow": 4,
     "parentRowSpace": 10,
     "hideCard": false,
     "mobileRightColumn": 57,
     "parentColumnSpace": 17.078125,
     "dynamicTriggerPathList": [{"key": "onOptionChange"}],
     "labelPosition": "Left",
-    "sourceData": "[\n  {\n    \"name\": \"Mainnet\",\n    \"code\": \"https://main.rpc.agoric.net/\"\n  },\n  {\n    \"name\": \"Ollinet\",\n    \"code\": \"https://ollinet.rpc.agoric.net/\"\n  },\n  {\n    \"name\": \"Devnet\",\n    \"code\": \"https://devnet.rpc.agoric.net/\"\n  },\n\t{\n    \"name\": \"Emerynet\",\n    \"code\": \"https://emerynet.rpc.agoric.net/\"\n  }\n]",
+    "sourceData": "[\n  {\n    \"name\": \"Mainnet\",\n    \"code\": \"https://main.api.agoric.net/\"\n  },\n  {\n    \"name\": \"Ollinet\",\n    \"code\": \"https://ollinet.api.agoric.net/\"\n  },\n  {\n    \"name\": \"Devnet\",\n    \"code\": \"https://devnet.api.agoric.net/\"\n  },\n\t{\n    \"name\": \"Emerynet\",\n    \"code\": \"https://emerynet.api.agoric.net/\"\n  }\n]",
     "key": "bq0ef9cxpj",
     "labelTextSize": "0.875rem",
     "isDeprecated": false,
@@ -61,6 +62,6 @@
     "originalTopRow": 5,
     "mobileLeftColumn": 37,
     "maxDynamicHeight": 9000,
-    "onOptionChange": "{{apis.getRpcWallets();}}",
+    "onOptionChange": "",
     "minDynamicHeight": 4
 }

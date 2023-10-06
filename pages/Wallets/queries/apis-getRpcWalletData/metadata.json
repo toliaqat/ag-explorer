@@ -35,7 +35,7 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-09-25T00:19:20Z"
+    "createdAt": "2023-10-04T06:56:05Z"
   },
   "id": "Wallets_apis.getRpcWalletData",
   "deleted": false,

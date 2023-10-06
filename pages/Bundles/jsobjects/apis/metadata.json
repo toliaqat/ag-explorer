@@ -8,12 +8,8 @@
     "archivedActions": [],
     "variables": [
       {
-        "name": "dataPath",
-        "value": "(\"/custom/vstorage/data/published.wallet.\").concat(tbl_wallets.selectedRow.wallet).concat(\".current\")"
-      },
-      {
-        "name": "myVar2",
-        "value": "{}"
+        "name": "data",
+        "value": "''"
       },
       {
         "name": "height",

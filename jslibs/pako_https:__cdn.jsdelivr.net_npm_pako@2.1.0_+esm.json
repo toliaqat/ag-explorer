@@ -1,0 +1,13 @@
+{
+  "name": "pako",
+  "uidString": "pako_https://cdn.jsdelivr.net/npm/pako@2.1.0/+esm",
+  "accessor": [
+    "pako"
+  ],
+  "url": "https://cdn.jsdelivr.net/npm/pako@2.1.0/+esm",
+  "version": "2.1.0",
+  "defs": "{\"!name\":\"LIB/pako\",\"pako\":{\"Deflate\":{\"!type\":\"fn()\",\"prototype\":{\"push\":{\"!type\":\"fn()\",\"prototype\":{}},\"onData\":{\"!type\":\"fn()\",\"prototype\":{}},\"onEnd\":{\"!type\":\"fn()\",\"prototype\":{}}}},\"Inflate\":{\"!type\":\"fn()\",\"prototype\":{\"push\":{\"!type\":\"fn()\",\"prototype\":{}},\"onData\":{\"!type\":\"fn()\",\"prototype\":{}},\"onEnd\":{\"!type\":\"fn()\",\"prototype\":{}}}},\"constants\":{\"Z_NO_FLUSH\":{\"!type\":\"number\"},\"Z_PARTIAL_FLUSH\":{\"!type\":\"number\"},\"Z_SYNC_FLUSH\":{\"!type\":\"number\"},\"Z_FULL_FLUSH\":{\"!type\":\"number\"},\"Z_FINISH\":{\"!type\":\"number\"},\"Z_BLOCK\":{\"!type\":\"number\"},\"Z_TREES\":{\"!type\":\"number\"},\"Z_OK\":{\"!type\":\"number\"},\"Z_STREAM_END\":{\"!type\":\"number\"},\"Z_NEED_DICT\":{\"!type\":\"number\"},\"Z_ERRNO\":{\"!type\":\"number\"},\"Z_STREAM_ERROR\":{\"!type\":\"number\"},\"Z_DATA_ERROR\":{\"!type\":\"number\"},\"Z_MEM_ERROR\":{\"!type\":\"number\"},\"Z_BUF_ERROR\":{\"!type\":\"number\"},\"Z_NO_COMPRESSION\":{\"!type\":\"number\"},\"Z_BEST_SPEED\":{\"!type\":\"number\"},\"Z_BEST_COMPRESSION\":{\"!type\":\"number\"},\"Z_DEFAULT_COMPRESSION\":{\"!type\":\"number\"},\"Z_FILTERED\":{\"!type\":\"number\"},\"Z_HUFFMAN_ONLY\":{\"!type\":\"number\"},\"Z_RLE\":{\"!type\":\"number\"},\"Z_FIXED\":{\"!type\":\"number\"},\"Z_DEFAULT_STRATEGY\":{\"!type\":\"number\"},\"Z_BINARY\":{\"!type\":\"number\"},\"Z_TEXT\":{\"!type\":\"number\"},\"Z_UNKNOWN\":{\"!type\":\"number\"},\"Z_DEFLATED\":{\"!type\":\"number\"}},\"deflate\":{\"!type\":\"fn()\",\"prototype\":{}},\"deflateRaw\":{\"!type\":\"fn()\",\"prototype\":{}},\"gzip\":{\"!type\":\"fn()\",\"prototype\":{}},\"inflate\":{\"!type\":\"fn()\",\"prototype\":{}},\"inflateRaw\":{\"!type\":\"fn()\",\"prototype\":{}},\"ungzip\":{\"!type\":\"fn()\",\"prototype\":{}}}}",
+  "deleted": false,
+  "policies": [],
+  "userPermissions": []
+}

@@ -31,9 +31,9 @@
     "text": "Block Height: {{apis.height}}",
     "key": "gpt2m0hrcf",
     "isDeprecated": false,
-    "rightColumn": 63,
+    "rightColumn": 61,
     "textAlign": "LEFT",
-    "dynamicHeight": "AUTO_HEIGHT",
+    "dynamicHeight": "FIXED",
     "widgetId": "6ajbst1dm1",
     "minWidth": 450,
     "isVisible": true,
@@ -49,11 +49,9 @@
     "isLoading": false,
     "mobileTopRow": 10,
     "responsiveBehavior": "fill",
-    "originalTopRow": 0,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 4,
     "fontSize": "0.875rem",
     "minDynamicHeight": 4
 }

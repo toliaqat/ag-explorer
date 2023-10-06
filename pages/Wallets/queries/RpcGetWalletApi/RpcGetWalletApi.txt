@@ -1,8 +1,0 @@
-{
-	"jsonrpc": "2.0",
-	"id": 1,
-	"method": "abci_query",
-	"params": {
-		"path": "/custom/vstorage/children/published.wallet"
-	}
-}

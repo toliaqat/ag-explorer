@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "getRpcWallets",
-    "fullyQualifiedName": "apis.getRpcWallets",
+    "name": "getBundleData",
+    "fullyQualifiedName": "apis.getBundleData",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -22,7 +22,7 @@
       "selfReferencingDataPaths": [],
       "jsArguments": []
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,10 +34,9 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": [],
-    "createdAt": "2023-09-25T00:03:24Z"
+    "userPermissions": []
   },
-  "id": "Bundles_apis.getRpcWallets",
+  "id": "Bundles_apis.getBundleData",
   "deleted": false,
-  "gitSyncId": "650ebdc3f3d421401941b61d_651b0b84338bcc55ca3b16e4"
+  "gitSyncId": "651d0c7d8e99897b73c0ef68_651f4d4b8e99897b73c0f014"
 }

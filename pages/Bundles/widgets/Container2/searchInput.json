@@ -1,8 +1,8 @@
 {
     "boxShadow": "none",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.f2c34197dbcf03595098986de898928f.svg",
-    "onSubmit": "{{apis.getRpcWallets();}}",
-    "topRow": 10,
+    "onSubmit": "{{\n\napis.getBundleData();\napis.getJSONPage();\ncloseModal('Modal1');\n}}",
+    "topRow": 4,
     "labelWidth": "0",
     "type": "INPUT_WIDGET_V2",
     "animateLoading": true,
@@ -14,7 +14,7 @@
     ],
     "labelStyle": "",
     "inputType": "TEXT",
-    "placeholderText": "Wallet Id",
+    "placeholderText": "Bundle Id",
     "isDisabled": false,
     "isRequired": false,
     "dynamicHeight": "FIXED",
@@ -31,6 +31,7 @@
     "originalBottomRow": 14,
     "mobileBottomRow": 9,
     "widgetName": "searchInput",
+    "dynamicPropertyPathList": [{"key": "onSubmit"}],
     "displayName": "Input",
     "searchTags": [
         "form",
@@ -38,7 +39,7 @@
         "number",
         "textarea"
     ],
-    "bottomRow": 14,
+    "bottomRow": 8,
     "parentRowSpace": 10,
     "autoFocus": false,
     "hideCard": false,
@@ -62,6 +63,6 @@
     "mobileLeftColumn": 21,
     "maxDynamicHeight": 9000,
     "iconAlign": "left",
-    "defaultText": "",
+    "defaultText": "95B037ED064FC5A3FE95AD535BABE4A59A263868042614BCCC00F1AAE5C3AD96",
     "minDynamicHeight": 4
 }

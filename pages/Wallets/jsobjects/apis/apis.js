@@ -2,6 +2,7 @@ export default {
 	dataPath: "/custom/vstorage/data/published.wallet.".concat(tbl_wallets.selectedRow.wallet).concat(".current"),
 	myVar2: {},
 	height: 1,
+	walletCount: 0,
 	walletId: "1",
 	slash: "\\",
 	cleanTxt (txt) {
@@ -36,7 +37,7 @@ export default {
 		console.log(tbl_wallets.selectedRow.wallet);
 		console.log(this.dataPath);
 		
-		let response = await RpcGetWalletDataAPI.run();
+		let response = await RpcGetDataAPI.run();
 		if (response.result.response.value === null) {
 			closeModal('Modal1');
 			return [{ "value": response.result.response.log}];
@@ -57,11 +58,11 @@ export default {
 			return [{wallet: searchInput.text}];
 		}
 
-		let response = await RpcGetWalletApi.run();
+		let response = await RpcGetChildrenApi.run();
 		this.height = response.result.response.height;
 		//return response;
 		let children = response.result.response.value && JSON.parse(atob(response.result.response.value)).children;
-
+		this.walletCount = children.length;
 		return children.map(v => ({wallet: v}));
 	},
 	

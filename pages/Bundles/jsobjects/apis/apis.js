@@ -17,6 +17,7 @@ export default {
 		let s = {data: response.tx.body.messages[0].compressed_bundle};
 		console.log(s);
 		postWindowMessage(s, 'Iframe1', "*");
+		return true;
 		//<h4 style="color:#191919;font-family:sans-serif;">Github view</h4>
 		//return this.data;
 	},
@@ -32,7 +33,8 @@ export default {
 					
 					
 					<a id="githublink" href="url" style="color:#191919;font-family:sans-serif;">Github view</a>
-			    <textarea id="codeFromGithub" name="code" style="border:solid 1px grey;">
+					
+			    <textarea id="codeFromGithub" name="code" style="border:solid 1px grey;padding:50px">
 					</textarea>
 					
 			    <script src="https://cdn.jsdelivr.net/npm/zip-loader@1.2.0/dist/zip-loader.min.js"></script>
@@ -112,7 +114,7 @@ export default {
 			          totalSize += size;
 			        }
 			        return {
-			          totalSize,
+			          storedSize,
 			          files: map
 			        };
 			      };
@@ -160,20 +162,15 @@ export default {
 			      const githubCode = (url, type = 'application/text') => fetch(url).then(res => {
 			        return res;
 			      });
-						
-						console.log("Loading now $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-						explore(\'${this.data}\').then(r => {
-			      	window.parent.postMessage(r, "*");
-							console.log("Done $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-			      });
-
 
 						var codeFromBundle = CodeMirror.fromTextArea(document.getElementById("codeFromBundle"), {
 							lineNumbers: true,
+							readOnly: true,
 							mode: "javascript"
 						});
 						var codeFromGithub = CodeMirror.fromTextArea(document.getElementById("codeFromGithub"), {
 							lineNumbers: true,
+							readOnly: true,
 							mode: "javascript"
 						});
 						 codeFromBundle.setSize("100%", "460px");
@@ -182,25 +179,37 @@ export default {
 					   window.addEventListener('message', (event) => {
 						 		console.log(event.data);
 						 		if (event.data.file != undefined) {
-									console.log(fileToGhUrl(event.data.file));
+									
 									let url = fileToGhUrl(event.data.file)
-									let code = githubCode(url).then(res => {
-										return res.text();	
-									}).then(text => {
-										codeFromGithub.setValue(text);
-										//myCodeMirror.setValue(js_beautify(text));
-									});
+									if (url != undefined) {
+										let code = githubCode(url).then(res => {
+											return res.text();	
+										}).then(text => {
+											codeFromGithub.setValue(text);
+										});
+									} else {
+										codeFromGithub.setValue('Cannot fetch github code for this file!');
+									}
 									
-									const fileText = JSON.parse(loader.extractAsText(event.data.file));
+									let fileText = '';
+									if (event.data.file.endsWith('json')) {
+										fileText = loader.extractAsJSON(event.data.file);
+										fileText = JSON.stringify(fileText);
+										fileText = js_beautify(fileText);
+									} else {
+										fileText = loader.extractAsText(event.data.file);
+										if (event.data.beautify === true) {
+											fileText = JSON.parse(fileText);
+											fileText = fileText.__syncModuleProgram__;
+											fileText = js_beautify(fileText);
+										}
+									}
 									
-									const txt = fileText.__syncModuleProgram__;
+									codeFromBundle.setValue(fileText);
 									
-									codeFromBundle.setValue(js_beautify(txt));
 								} else if (event.data.data != undefined) {
 									explore(event.data.data).then(r => {
-									  console.log("Got data event $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 										window.parent.postMessage(r, "*");
-										console.log("Done loading $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
 									});
 								}
 						});

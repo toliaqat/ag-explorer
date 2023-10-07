@@ -121,7 +121,7 @@
             "index": 1,
             "isDiscardVisible": true,
             "isVisible": true,
-            "label": "Tx",
+            "label": "Transactions",
             "columnType": "text",
             "horizontalAlignment": "LEFT",
             "isCellEditable": false,
@@ -132,7 +132,7 @@
             "verticalAlignment": "CENTER"
         }
     },
-    "onRowSelected": "{{searchInput.setValue(Table1.selectedRow.Tx)}}",
+    "onRowSelected": "{{\nsearchInput.setValue(Table1.selectedRow.Tx);\napis.getBundleData();\n}}",
     "key": "1380b89hk6",
     "canFreezeColumn": true,
     "isDeprecated": false,

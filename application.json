@@ -56,9 +56,6 @@
   "unpublishedCustomJSLibs": [
     {
       "uidString": "JsonViewer_https://cdn.jsdelivr.net/npm/@textea/json-viewer@3.1.1/dist/browser.min.js"
-    },
-    {
-      "uidString": "pako_https://cdn.jsdelivr.net/npm/pako@2.1.0/+esm"
     }
   ],
   "publishedCustomJSLibs": [],

@@ -125,7 +125,7 @@
         "cellBackground": "",
         "verticalAlignment": "CENTER"
     }},
-    "onRowSelected": "{{showModal('mdl_returnsDetail');}}",
+    "onRowSelected": "",
     "key": "361c7eqfhn",
     "canFreezeColumn": false,
     "isDeprecated": false,

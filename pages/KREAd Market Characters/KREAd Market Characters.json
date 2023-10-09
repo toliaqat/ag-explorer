@@ -28,19 +28,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "KREAd Market Characters_getReturns",
-              "name": "getReturns",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "(tbl_wallets.pageNo - 1) * tbl_wallets.pageSize",
-                "tbl_wallets.pageSize"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "KREAd Market Characters_apis.getRpcWalletData",
               "name": "apis.getRpcWalletData",
               "collectionId": "KREAd Market Characters_apis",

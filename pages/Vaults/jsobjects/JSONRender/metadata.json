@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "JSONRender",
+    "pageId": "Vaults",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Vaults_JSONRender",
+  "deleted": false,
+  "gitSyncId": "651d0c7d8e99897b73c0ef68_652128ba8e99897b73c0f041"
+}

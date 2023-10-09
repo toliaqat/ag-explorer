@@ -20,6 +20,10 @@
         "value": "1"
       },
       {
+        "name": "listCount",
+        "value": "0"
+      },
+      {
         "name": "walletId",
         "value": "\"1\""
       },

@@ -35,7 +35,7 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-09-25T03:28:29Z"
+    "createdAt": "2023-10-04T06:56:05Z"
   },
   "id": "Vaults_vaultsApi.getRpcWalletData",
   "deleted": false,

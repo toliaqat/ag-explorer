@@ -62,6 +62,6 @@
     "originalTopRow": 5,
     "mobileLeftColumn": 37,
     "maxDynamicHeight": 9000,
-    "onOptionChange": "",
+    "onOptionChange": "{{apis.getBundleTxs();\nsearchInput.setValue(\"\")}}",
     "minDynamicHeight": 4
 }

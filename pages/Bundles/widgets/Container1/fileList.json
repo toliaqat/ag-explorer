@@ -12,20 +12,20 @@
         {"key": "accentColor"},
         {"key": "borderRadius"},
         {"key": "boxShadow"},
-        {"key": "tableData"},
         {"key": "primaryColumns.file.computedValue"},
-        {"key": "primaryColumns.size.computedValue"}
+        {"key": "primaryColumns.size.computedValue"},
+        {"key": "tableData"}
     ],
     "needsHeightForContent": true,
     "leftColumn": 0,
     "delimiter": ",",
-    "defaultSelectedRowIndex": 0,
+    "defaultSelectedRowIndex": "-1",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "isVisibleFilters": false,
+    "isVisibleFilters": true,
     "isVisible": true,
     "enableClientSideSearch": true,
     "version": 2,
-    "totalRecordsCount": 0,
+    "totalRecordsCount": "0",
     "tags": [
         "Suggested",
         "Display"
@@ -133,7 +133,7 @@
             "verticalAlignment": "CENTER"
         }
     },
-    "onRowSelected": "{{postWindowMessage({\n  file: fileList.selectedRow.file, beautify: beautifyToggle.isSwitchedOn}, 'Iframe1', \"*\");}}",
+    "onRowSelected": "{{postWindowMessage({\n  file: fileList.selectedRow.file, beautify: beautifyToggle.isSwitchedOn}, 'Iframe1', \"*\");\n\n\n\n}}",
     "key": "u65m3pkk8y",
     "canFreezeColumn": true,
     "isDeprecated": false,

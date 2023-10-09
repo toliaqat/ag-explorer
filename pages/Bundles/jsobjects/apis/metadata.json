@@ -8,6 +8,14 @@
     "archivedActions": [],
     "variables": [
       {
+        "name": "tx",
+        "value": "searchInput.text"
+      },
+      {
+        "name": "apiToRpcEndpoint",
+        "value": "{\n  \"https://main.api.agoric.net/\": \"https://agoric.rpc.kjnodes.com/\",\n  \"https://emerynet.api.agoric.net/\": \"https://emerynet.rpc.agoric.net/\",\n  \"https://ollinet.api.agoric.net/\": \"https://ollinet.rpc.agoric.net/\",\n  \"https://devnet.api.agoric.net/\": \"https://devnet.rpc.agoric.net/\"\n}"
+      },
+      {
         "name": "data",
         "value": "''"
       },

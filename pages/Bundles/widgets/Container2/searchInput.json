@@ -2,7 +2,7 @@
     "boxShadow": "none",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.f2c34197dbcf03595098986de898928f.svg",
     "onSubmit": "{{\napis.getBundleData();\n}}",
-    "topRow": 5,
+    "topRow": 7,
     "labelWidth": "0",
     "type": "INPUT_WIDGET_V2",
     "animateLoading": true,
@@ -14,7 +14,7 @@
     ],
     "labelStyle": "",
     "inputType": "TEXT",
-    "placeholderText": "Tx Id",
+    "placeholderText": "Tx Hash",
     "isDisabled": false,
     "isRequired": false,
     "dynamicHeight": "FIXED",
@@ -42,7 +42,7 @@
         "number",
         "textarea"
     ],
-    "bottomRow": 9,
+    "bottomRow": 11,
     "parentRowSpace": 10,
     "autoFocus": false,
     "hideCard": false,
@@ -55,7 +55,7 @@
     "labelPosition": "Left",
     "key": "z3l3ngze4u",
     "labelTextSize": "0.875rem",
-    "onTextChanged": "{{apis.getBundleData();}}",
+    "onTextChanged": "{{\n\napis.getBundleData();\n\nnavigateTo('Bundles', {\n  \"tx\": searchInput.text,\n  \"network\": networkInput.selectedOptionValue\n}, 'SAME_WINDOW');\n\n}}",
     "isDeprecated": false,
     "rightColumn": 63,
     "widgetId": "63lqvyuqtw",
@@ -70,6 +70,6 @@
     "mobileLeftColumn": 21,
     "maxDynamicHeight": 9000,
     "iconAlign": "left",
-    "defaultText": "95B037ED064FC5A3FE95AD535BABE4A59A263868042614BCCC00F1AAE5C3AD96",
+    "defaultText": "",
     "minDynamicHeight": 4
 }

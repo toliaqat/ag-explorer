@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "getBundleData",
-    "fullyQualifiedName": "apis.getBundleData",
+    "name": "getJSONPage",
+    "fullyQualifiedName": "JSONRender.getJSONPage",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,8 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Bundles",
-    "collectionId": "Bundles_apis",
+    "pageId": "Vaults",
+    "collectionId": "Vaults_JSONRender",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -22,7 +22,7 @@
       "selfReferencingDataPaths": [],
       "jsArguments": []
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -31,12 +31,13 @@
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-10-07T09:45:30Z"
   },
-  "id": "Bundles_apis.getBundleData",
+  "id": "Vaults_JSONRender.getJSONPage",
   "deleted": false,
-  "gitSyncId": "651d0c7d8e99897b73c0ef68_651f4d4b8e99897b73c0f014"
+  "gitSyncId": "651d0c7d8e99897b73c0ef68_652128ba8e99897b73c0f03f"
 }

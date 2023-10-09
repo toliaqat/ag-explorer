@@ -27,7 +27,7 @@
     ],
     "isLoading": false,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 14,
+    "originalBottomRow": 12,
     "mobileBottomRow": 16,
     "widgetName": "storageSize",
     "displayName": "Input",
@@ -57,10 +57,10 @@
     "renderMode": "CANVAS",
     "mobileTopRow": 9,
     "responsiveBehavior": "fill",
-    "originalTopRow": 7,
+    "originalTopRow": 5,
     "mobileLeftColumn": 2,
     "maxDynamicHeight": 9000,
     "iconAlign": "left",
-    "defaultText": "{{Iframe1.message.storedSize || 0}}",
+    "defaultText": "{{(Iframe1 && Iframe1.message && Iframe1.message.storedSize) || 0}}",
     "minDynamicHeight": 4
 }

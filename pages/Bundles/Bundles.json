@@ -2,6 +2,7 @@
   "unpublishedPage": {
     "name": "Bundles",
     "slug": "bundles",
+    "customSlug": "bundles",
     "layouts": [
       {
         "viewMode": false,

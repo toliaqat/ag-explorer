@@ -2,7 +2,7 @@
   "unpublishedPage": {
     "name": "Wallets",
     "slug": "wallets",
-    "customSlug": "",
+    "customSlug": "wallets",
     "layouts": [
       {
         "viewMode": false,

@@ -15,15 +15,18 @@ export default {
 		return JSON.parse(txt.replaceAll(this.slash, '').replaceAll('\"#{', '{').replaceAll('}\"', '}').replaceAll(/\"/g,'"'));
 	},
 	async getBundleTxs() {
+		showModal('Modal1');
 		const txs = [];
 		const response = await GetBundleInstallTxs.run();
 		if (!response || !response.result) {
+			closeModal('Modal1');
 			return txs;
 		}
 		
 		for (const tx of response.result.txs) {
 			txs.push({tx: tx.hash, height: tx.height});
 		}
+		closeModal('Modal1');
 		return txs;
 	},
 	
@@ -62,9 +65,9 @@ export default {
 		return `
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.64.0/codemirror.min.css">
 				
-					<p style="color:#191919;font-family:sans-serif">Extracted from the bundle</p>
+					<p style="color:#191919;font-family:sans-serif">Code from the bundle!</p>
 			    <textarea id="codeFromBundle" name="code" style="border:solid 1px grey;"></textarea>
-					<p style="color:#191919;font-family:sans-serif">Source code from <a id="githublink" href="url" target="_blank" rel="noopener noreferrer">github</a></p>
+					<p style="color:#191919;font-family:sans-serif">Code from <a id="githublink" href="url" target="_blank" rel="noopener noreferrer">github</a></p>
 			    <textarea id="codeFromGithub" name="code" style="border:solid 1px grey;padding:50px"></textarea>
 					
 			    <script src="https://cdn.jsdelivr.net/npm/zip-loader@1.2.0/dist/zip-loader.min.js"></script>

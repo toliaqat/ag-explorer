@@ -45,7 +45,7 @@ export default {
 		if (children.length === 0 || this.path.match(/published\.wallet\./g)) {
 			this.dataPath = this.path;
 			this.dataPath = this.dataPath.replace("/children/", "/data/");
-			
+
 			await this.getRpcData();
 			closeModal('Modal1');
 
@@ -100,24 +100,26 @@ export default {
 	},
 
 	async getRpcChildrenLevelSix() {
-			this.path = `/custom/vstorage/children/published.${tbl_children1.selectedRow.item}.${tbl_children2.selectedRow.item}.${tbl_children3.selectedRow.item}.${tbl_children4.selectedRow.item}.${tbl_children5.selectedRow.item}`;
+		this.path = `/custom/vstorage/children/published.${tbl_children1.selectedRow.item}.${tbl_children2.selectedRow.item}.${tbl_children3.selectedRow.item}.${tbl_children4.selectedRow.item}.${tbl_children5.selectedRow.item}`;
 		Iframe1.setVisibility(false);
 		return await this.getRpcChildren();
 	},
 
 	async pageLoad() {
-		if (appsmith.URL.queryParams.network) {
-			networkInput.setSelectedOption(appsmith.URL.queryParams.network);
-		}
-		
 		await this.getRpcChildrenLevelOne();
-		
-		if (appsmith.URL.queryParams.path) {	
+
+		if (appsmith.URL.queryParams.path) {
 			if (appsmith.URL.queryParams.path.match(/\/data\//g)) {
 				this.dataPath = appsmith.URL.queryParams.path;
 				await this.getRpcData();
 			}
 		}
-	},
 
+		if (appsmith.URL.queryParams.network) {
+			const networkExists = networkInput.options.some(item => item.value === appsmith.URL.queryParams.network);
+			if (networkExists) {
+					networkInput.setSelectedOption(appsmith.URL.queryParams.network);	
+			} 
+		}
+	},
 }

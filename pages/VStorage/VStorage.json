@@ -35,7 +35,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async function () {\n  if (appsmith.URL.queryParams.network) {\n    networkInput.setSelectedOption(appsmith.URL.queryParams.network);\n  }\n  await apis.getRpcChildrenLevelOne();\n  if (appsmith.URL.queryParams.path) {\n    if (appsmith.URL.queryParams.path.match(/\\/data\\//g)) {\n      apis.dataPath = appsmith.URL.queryParams.path;\n      await apis.getRpcData();\n    }\n  }\n}"
+                "async function () {\n  await apis.getRpcChildrenLevelOne();\n  if (appsmith.URL.queryParams.path) {\n    if (appsmith.URL.queryParams.path.match(/\\/data\\//g)) {\n      apis.dataPath = appsmith.URL.queryParams.path;\n      await apis.getRpcData();\n    }\n  }\n  if (appsmith.URL.queryParams.network) {\n    const networkExists = networkInput.options.some(item => item.value === appsmith.URL.queryParams.network);\n    if (networkExists) {\n      networkInput.setSelectedOption(appsmith.URL.queryParams.network);\n    }\n  }\n}"
               ],
               "timeoutInMillisecond": 10000
             }

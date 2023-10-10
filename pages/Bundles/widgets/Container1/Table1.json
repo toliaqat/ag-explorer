@@ -71,7 +71,7 @@
     ],
     "displayName": "Table",
     "bottomRow": 27,
-    "columnWidthMap": {"tx": 330},
+    "columnWidthMap": {"tx": 521},
     "parentRowSpace": 10,
     "hideCard": false,
     "mobileRightColumn": 12,
@@ -140,7 +140,7 @@
             "verticalAlignment": "CENTER"
         }
     },
-    "onRowSelected": "{{\nsearchInput.setValue(Table1.selectedRow.tx);\napis.getBundleData();\n\nnavigateTo('Bundles', {\n  \"tx\": Table1.selectedRow.tx,\n  \"network\": networkInput.selectedOptionValue\n}, 'SAME_WINDOW');\n}}",
+    "onRowSelected": "{{\nsearchInput.setValue(Table1.selectedRow.tx);\napis.getBundleData();\n\nnavigateTo('Bundles', {\n  \"tx\": Table1.selectedRow.tx,\n  \"apinetwork\": networkInput.selectedOptionValue\n}, 'SAME_WINDOW');\n}}",
     "key": "1380b89hk6",
     "canFreezeColumn": false,
     "isDeprecated": false,

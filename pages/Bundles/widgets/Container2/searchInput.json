@@ -55,7 +55,7 @@
     "labelPosition": "Left",
     "key": "z3l3ngze4u",
     "labelTextSize": "0.875rem",
-    "onTextChanged": "{{\n\napis.getBundleData();\n\nnavigateTo('Bundles', {\n  \"tx\": searchInput.text,\n  \"network\": networkInput.selectedOptionValue\n}, 'SAME_WINDOW');\n\n}}",
+    "onTextChanged": "{{\n\napis.getBundleData();\n\nnavigateTo('Bundles', {\n  \"tx\": searchInput.text,\n  \"apinetwork\": networkInput.selectedOptionValue\n}, 'SAME_WINDOW');\n\n}}",
     "isDeprecated": false,
     "rightColumn": 63,
     "widgetId": "63lqvyuqtw",

@@ -49,17 +49,16 @@ export default {
 		postWindowMessage(s, 'Iframe1', "*");
 		return true;
 	},
-		async pageLoad() {
+	async pageLoad() {
 		if (appsmith.URL.queryParams.tx != undefined && appsmith.URL.queryParams.tx != null) {
 			searchInput.setValue(appsmith.URL.queryParams.tx);
 		}
 		
-		if (appsmith.URL.queryParams.network != undefined && appsmith.URL.queryParams.network != null) {
-			networkInput.setSelectedOption(appsmith.URL.queryParams.network);
+		if (appsmith.URL.queryParams.apinetwork) {
+			networkInput.setSelectedOption(appsmith.URL.queryParams.apinetwork);
 		}
 		
 		this.getBundleData();
-
 	},
 	async getJSONPage() {
 		return `
@@ -144,43 +143,6 @@ export default {
 							'ertp': 'ERTP',
 							'swingset-vat': 'SwingSet'
 						}
-						const fileToGhUrlold = (filename) => {
-							if (filename.startsWith("@agoric/")) {
-								let parts = filename.split('/');
-								if (parts[1].match(/-v[0-9]/g)) {
-									//parts[1] = parts[1].replace('-v0', '-0');
-									let package = parts[1].split('-v0')[0];
-									let realPackage = packageNames[package] || package;
-									let filePart = parts.slice(2).join('/');
-									let version = \`0\${parts[1].split('-v0').slice(1).join('-')}\`;
-									const finalUrl = \`https://raw.githubusercontent.com/Agoric/agoric-sdk/%40agoric/\${package}%40\${version}/packages/\${realPackage}/\${filePart}\`;
-									var urlElement = document.getElementById('githublink');
-									
-									urlElement.setAttribute('href', finalUrl);
- 
-									return finalUrl;
-							
-								}
-								
-							} else if (filename.startsWith("@endo/")) {
-									console.log("teset");
-									let parts = filename.split('/');
-									if (parts[1].match(/-v[0-9]/g)) {
-										//parts[1] = parts[1].replace('-v', '-');
-										let package = parts[1].split('-v')[0];
-										let realPackage = packageNames[package] || package;
-										let filePart = parts.slice(2).join('/');
-										let version = parts[1].split('-v').slice(1).join('-');
-										const finalUrl = \`https://raw.githubusercontent.com/endojs/endo/%40endo/\${package}%40\${version}/packages/\${realPackage}/\${filePart}\`;
-										var urlElement = document.getElementById('githublink');
- 										urlElement.setAttribute('href', finalUrl);
- 
-										return finalUrl;
-									}
-							}
-							return undefined;
-						}
-						
 						
 						const constructUrl = (base, namespace, filename) => {
 								let parts = filename.split('/');

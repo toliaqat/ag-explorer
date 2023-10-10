@@ -14,7 +14,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1300,
+          "bottomRow": 1320,
           "containerStyle": "none",
           "snapRows": 99,
           "parentRowSpace": 1,
@@ -35,7 +35,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async function () {\n  if (appsmith.URL.queryParams.network) {\n    networkInput.setSelectedOption(appsmith.URL.queryParams.network);\n  }\n  await apis.getRpcChildrenLevelOne();\n  if (appsmith.URL.queryParams.path) {\n    apis.dataPath = appsmith.URL.queryParams.path;\n    await apis.getRpcData();\n  }\n}"
+                "async function () {\n  if (appsmith.URL.queryParams.network) {\n    networkInput.setSelectedOption(appsmith.URL.queryParams.network);\n  }\n  await apis.getRpcChildrenLevelOne();\n  if (appsmith.URL.queryParams.path) {\n    if (appsmith.URL.queryParams.path.match(/\\/data\\//g)) {\n      apis.dataPath = appsmith.URL.queryParams.path;\n      await apis.getRpcData();\n    }\n  }\n}"
               ],
               "timeoutInMillisecond": 10000
             }

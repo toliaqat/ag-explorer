@@ -3,6 +3,7 @@
 	"id": 1,
 	"method": "abci_query",
 	"params": {
-		"path": {{apis.path}}
+		"path": {{apis.path}},
+		"height": {{blockHeightInput.text || "0"}}
 	}
 }

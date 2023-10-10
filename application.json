@@ -1,8 +1,12 @@
 {
   "pages": [
     {
-      "id": "Wallets",
+      "id": "VStorage",
       "isDefault": true
+    },
+    {
+      "id": "Wallets",
+      "isDefault": false
     },
     {
       "id": "Vaults",
@@ -26,10 +30,6 @@
     },
     {
       "id": "Bundles",
-      "isDefault": false
-    },
-    {
-      "id": "VStorage",
       "isDefault": false
     }
   ],

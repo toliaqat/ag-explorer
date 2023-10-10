@@ -42,19 +42,16 @@ export default {
 		let response = await RpcGetChildrenApi.run();
 		this.height = response.result.response.height;
 		let children = response.result.response.value && JSON.parse(atob(response.result.response.value)).children;
-		if (children.length === 0) {
+		if (children.length === 0 || this.path.match(/published\.wallet\./g)) {
 			this.dataPath = this.path;
 			this.dataPath = this.dataPath.replace("/children/", "/data/");
+			
 			await this.getRpcData();
 			closeModal('Modal1');
 
 			return [];
 		}
 		closeModal('Modal1');
-		navigateTo('VStorage', {
-			"path": this.path,
-			"network": networkInput.selectedOptionValue
-		}, 'SAME_WINDOW');
 		return children.map(v => ({item: v}));
 	},
 
@@ -69,7 +66,7 @@ export default {
 	},
 
 	async getRpcChildrenLevelTwo() {
-		this.path = `/custom/vstorage/children/published.${tbl_children1.selectedRow.item}`;
+		this.path = `/custom/vstorage/children/published.${tbl_children1.selectedRow.item}`;	
 		tbl_children2.setData([]);
 		tbl_children3.setData([]);
 		tbl_children4.setData([]);
@@ -103,7 +100,7 @@ export default {
 	},
 
 	async getRpcChildrenLevelSix() {
-		this.path = `/custom/vstorage/children/published.${tbl_children1.selectedRow.item}.${tbl_children2.selectedRow.item}.${tbl_children3.selectedRow.item}.${tbl_children4.selectedRow.item}.${tbl_children5.selectedRow.item}`;
+			this.path = `/custom/vstorage/children/published.${tbl_children1.selectedRow.item}.${tbl_children2.selectedRow.item}.${tbl_children3.selectedRow.item}.${tbl_children4.selectedRow.item}.${tbl_children5.selectedRow.item}`;
 		Iframe1.setVisibility(false);
 		return await this.getRpcChildren();
 	},
@@ -112,11 +109,14 @@ export default {
 		if (appsmith.URL.queryParams.network) {
 			networkInput.setSelectedOption(appsmith.URL.queryParams.network);
 		}
+		
 		await this.getRpcChildrenLevelOne();
-
-		if (appsmith.URL.queryParams.path) {
-			this.dataPath = appsmith.URL.queryParams.path;
-			await this.getRpcData();
+		
+		if (appsmith.URL.queryParams.path) {	
+			if (appsmith.URL.queryParams.path.match(/\/data\//g)) {
+				this.dataPath = appsmith.URL.queryParams.path;
+				await this.getRpcData();
+			}
 		}
 	},
 

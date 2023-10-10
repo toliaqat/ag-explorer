@@ -31,7 +31,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{\n\t\t\"jsonrpc\": \"2.0\",\n\t\t\"id\": 1,\n\t\t\"method\": \"abci_query\",\n\t\t\"params\": {\n\t\t\t\"path\": {{apis.dataPath}}\n\t\t}\n\t}",
+      "body": "{\n\t\t\"jsonrpc\": \"2.0\",\n\t\t\"id\": 1,\n\t\t\"method\": \"abci_query\",\n\t\t\"params\": {\n\t\t\t\"path\": {{apis.dataPath}},\n\t\t\t\"height\": {{blockHeightInput.text || \"0\"}}\n\t\t}\n\t}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
@@ -58,6 +58,7 @@
     "messages": [],
     "jsonPathKeys": [
       "apis.dataPath",
+      "blockHeightInput.text || \"0\"",
       "networkInput.selectedOptionValue"
     ],
     "userSetOnLoad": false,

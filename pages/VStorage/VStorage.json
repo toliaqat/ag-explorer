@@ -1,0 +1,58 @@
+{
+  "unpublishedPage": {
+    "name": "VStorage",
+    "slug": "vstorage",
+    "customSlug": "vstorage",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1300,
+          "containerStyle": "none",
+          "snapRows": 99,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 86,
+          "minHeight": 1010,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "VStorage_apis.pageLoad",
+              "name": "apis.pageLoad",
+              "collectionId": "VStorage_apis",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  if (appsmith.URL.queryParams.network) {\n    networkInput.setSelectedOption(appsmith.URL.queryParams.network);\n  }\n  await apis.getRpcChildrenLevelOne();\n  if (appsmith.URL.queryParams.path) {\n    apis.dataPath = appsmith.URL.queryParams.path;\n    await apis.getRpcData();\n  }\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "VStorage",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "651d0c7d8e99897b73c0ef68_652423b08e99897b73c0f081"
+}

@@ -35,9 +35,9 @@
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-10-04T06:56:05Z"
+    "createdAt": "2023-10-09T16:14:24Z"
   },
   "id": "Wallets_apis.getRpcWallets",
   "deleted": false,
-  "gitSyncId": "650ebdc3f3d421401941b61d_6510ce4cd248b526a9a4b6b8"
+  "gitSyncId": "651d0c7d8e99897b73c0ef68_652426e08e99897b73c0f0a9"
 }

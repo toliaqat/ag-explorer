@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "getRpcWalletData",
-    "fullyQualifiedName": "apis.getRpcWalletData",
+    "name": "getRpcData",
+    "fullyQualifiedName": "apis.getRpcData",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,8 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Wallets",
-    "collectionId": "Wallets_apis",
+    "pageId": "VStorage",
+    "collectionId": "VStorage_apis",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -22,7 +22,7 @@
       "selfReferencingDataPaths": [],
       "jsArguments": []
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -31,13 +31,13 @@
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-10-09T16:14:24Z"
+    "createdAt": "2023-10-09T16:00:48Z"
   },
-  "id": "Wallets_apis.getRpcWalletData",
+  "id": "VStorage_apis.getRpcData",
   "deleted": false,
-  "gitSyncId": "651d0c7d8e99897b73c0ef68_652426e08e99897b73c0f0aa"
+  "gitSyncId": "651d0c7d8e99897b73c0ef68_652423b08e99897b73c0f083"
 }

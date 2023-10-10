@@ -1,0 +1,32 @@
+{
+  "unpublishedCollection": {
+    "name": "apis",
+    "pageId": "VStorage",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "path",
+        "value": "\"/custom/vstorage/children/published\""
+      },
+      {
+        "name": "dataPath",
+        "value": "\"/custom/vstorage/data\""
+      },
+      {
+        "name": "height",
+        "value": "1"
+      },
+      {
+        "name": "slash",
+        "value": "\"\\\\\""
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "VStorage_apis",
+  "deleted": false,
+  "gitSyncId": "651d0c7d8e99897b73c0ef68_652423b08e99897b73c0f091"
+}

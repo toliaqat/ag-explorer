@@ -22,7 +22,7 @@
       "selfReferencingDataPaths": [],
       "jsArguments": []
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -31,12 +31,12 @@
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
   "id": "Wallets_apis.pageLoad",
   "deleted": false,
-  "gitSyncId": "650ebdc3f3d421401941b61d_651c942667b2dc51a90ab3c9"
+  "gitSyncId": "651d0c7d8e99897b73c0ef68_652426e08e99897b73c0f0ad"
 }

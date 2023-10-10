@@ -27,7 +27,6 @@
       ]
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -39,10 +38,9 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": [],
-    "createdAt": "2023-09-23T17:34:32Z"
+    "userPermissions": []
   },
   "id": "Wallets_apis.cleanTxt",
   "deleted": false,
-  "gitSyncId": "650ebdc3f3d421401941b61d_650f72a7d4b5a14eded64c68"
+  "gitSyncId": "651d0c7d8e99897b73c0ef68_652426e08e99897b73c0f0a8"
 }

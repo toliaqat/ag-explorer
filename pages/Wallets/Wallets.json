@@ -29,19 +29,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Wallets_apis.pageLoad",
-              "name": "apis.pageLoad",
-              "collectionId": "Wallets_apis",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async function () {\n  if (appsmith.URL.queryParams.walletId != undefined && appsmith.URL.queryParams.walletId != null) {\n    searchInput.setValue(appsmith.URL.queryParams.walletId);\n  }\n  if (appsmith.URL.queryParams.network != undefined && appsmith.URL.queryParams.network != null) {\n    networkInput.setSelectedOption(appsmith.URL.queryParams.network);\n  }\n  apis.getRpcWalletData();\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Wallets_apis.getRpcWalletData",
               "name": "apis.getRpcWalletData",
               "collectionId": "Wallets_apis",

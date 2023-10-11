@@ -55,10 +55,10 @@
   "color": "#C7F3E3",
   "icon": "bag",
   "unpublishedAppLayout": {
-    "type": "TABLET"
+    "type": "FLUID"
   },
   "publishedAppLayout": {
-    "type": "FLUID"
+    "type": "TABLET"
   },
   "unpublishedCustomJSLibs": [
     {

@@ -52,6 +52,9 @@ export default {
 			return [];
 		}
 		closeModal('Modal1');
+		navigateTo('VStorage', {
+			"network": networkInput.selectedOptionValue
+		}, 'SAME_WINDOW');
 		return children.map(v => ({item: v}));
 	},
 

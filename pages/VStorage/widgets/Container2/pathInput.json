@@ -1,8 +1,8 @@
 {
     "boxShadow": "none",
     "iconSVG": "/static/media/icon.f2c34197dbcf03595098986de898928f.svg",
-    "onSubmit": "{{\n\t\t\tapis.dataPath = pathInput.text;\n\t\t\tapis.getRpcData();\n}}",
-    "topRow": 5,
+    "onSubmit": "{{\n\t\tnavigateTo('VStorage', {\n\t\t\t\"path\": pathInput.text,\n\t\t\t\"network\": networkInput.selectedOptionValue\n\t\t}, 'SAME_WINDOW');\n\t\tapis.pageLoad();\n}}",
+    "topRow": 9,
     "labelWidth": 5,
     "type": "INPUT_WIDGET_V2",
     "animateLoading": true,
@@ -14,7 +14,7 @@
     ],
     "labelStyle": "",
     "inputType": "TEXT",
-    "isDisabled": false,
+    "isDisabled": true,
     "isRequired": false,
     "dynamicHeight": "FIXED",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -37,7 +37,7 @@
         "number",
         "textarea"
     ],
-    "bottomRow": 9,
+    "bottomRow": 14,
     "parentRowSpace": 10,
     "autoFocus": false,
     "hideCard": false,

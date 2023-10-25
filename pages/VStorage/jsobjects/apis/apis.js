@@ -60,7 +60,7 @@ export default {
 
 	async getRpcChildrenLevelOne () {
 		this.path = "/custom/vstorage/children/published";
-		//tbl_children1.setData([]);
+		tbl_children1.setSelectedRowIndex(-1);
 		tbl_children2.setData([]);
 		tbl_children3.setData([]);
 		tbl_children4.setData([]);
@@ -70,7 +70,7 @@ export default {
 
 	async getRpcChildrenLevelTwo() {
 		this.path = `/custom/vstorage/children/published.${tbl_children1.selectedRow.item}`;	
-		//tbl_children2.setData([]);
+		tbl_children2.setSelectedRowIndex(-1);
 		tbl_children3.setData([]);
 		tbl_children4.setData([]);
 		tbl_children5.setData([]);
@@ -80,7 +80,7 @@ export default {
 
 	async getRpcChildrenLevelThree() {
 		this.path = `/custom/vstorage/children/published.${tbl_children1.selectedRow.item}.${tbl_children2.selectedRow.item}`;
-		//tbl_children3.setData([]);
+		tbl_children3.setSelectedRowIndex(-1);
 		tbl_children4.setData([]);
 		tbl_children5.setData([]);
 		Iframe1.setVisibility(false);
@@ -89,7 +89,7 @@ export default {
 
 	async getRpcChildrenLevelFour() {
 		this.path = `/custom/vstorage/children/published.${tbl_children1.selectedRow.item}.${tbl_children2.selectedRow.item}.${tbl_children3.selectedRow.item}`;
-		//tbl_children4.setData([]);
+		tbl_children4.setSelectedRowIndex(-1);
 		tbl_children5.setData([]);
 		Iframe1.setVisibility(false);
 		return await this.getRpcChildren();
@@ -97,7 +97,7 @@ export default {
 
 	async getRpcChildrenLevelFive() {
 		this.path = `/custom/vstorage/children/published.${tbl_children1.selectedRow.item}.${tbl_children2.selectedRow.item}.${tbl_children3.selectedRow.item}.${tbl_children4.selectedRow.item}`;
-		//tbl_children5.setData([]);
+		tbl_children5.setSelectedRowIndex(-1);
 		Iframe1.setVisibility(false);
 		return await this.getRpcChildren();
 	},

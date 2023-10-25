@@ -144,7 +144,7 @@
     "label": "Data",
     "searchKey": "",
     "parentId": "h0y5es6use",
-    "serverSidePaginationEnabled": false,
+    "serverSidePaginationEnabled": true,
     "renderMode": "CANVAS",
     "horizontalAlignment": "LEFT",
     "isVisibleSearch": true,

@@ -35,7 +35,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "JS",
               "jsonPathKeys": [
-                "async function () {\n  apis.path = \"/custom/vstorage/children/published\";\n  tbl_children1.setData([]);\n  tbl_children2.setData([]);\n  tbl_children3.setData([]);\n  tbl_children4.setData([]);\n  tbl_children5.setData([]);\n  return await apis.getRpcChildren();\n}"
+                "async function () {\n  apis.path = \"/custom/vstorage/children/published\";\n  tbl_children2.setData([]);\n  tbl_children3.setData([]);\n  tbl_children4.setData([]);\n  tbl_children5.setData([]);\n  return await apis.getRpcChildren();\n}"
               ],
               "timeoutInMillisecond": 10000
             },

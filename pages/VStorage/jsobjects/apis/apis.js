@@ -28,6 +28,7 @@ export default {
 		}
 
 		this.height = response.result.response.height;
+		
 		let data = response.result.response.value && JSON.parse(atob(response.result.response.value));
 		let result = JSON.parse((data).value) && JSON.parse((data).value).values.map(v => ({value: (this.cleanTxt(v))})).map(kv => ({ "value": kv.value}));
 		result = { height: response.result.response.height, result };
@@ -41,6 +42,7 @@ export default {
 		showModal('Modal1');
 		let response = await RpcGetChildrenApi.run();
 		this.height = response.result.response.height;
+		
 		let children = response.result.response.value && JSON.parse(atob(response.result.response.value)).children;
 		if (children.length === 0 || this.path.match(/published\.wallet\./g)) {
 			this.dataPath = this.path;

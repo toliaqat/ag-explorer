@@ -55,7 +55,7 @@
   "color": "#C7F3E3",
   "icon": "coding",
   "unpublishedAppLayout": {
-    "type": "FLUID"
+    "type": "TABLET"
   },
   "publishedAppLayout": {
     "type": "FLUID"

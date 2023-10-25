@@ -2,7 +2,7 @@
     "boxShadow": "none",
     "iconSVG": "/static/media/icon.f2c34197dbcf03595098986de898928f.svg",
     "onSubmit": "{{\n\t\tnavigateTo('VStorage', {\n\t\t\t\"path\": pathInput.text,\n\t\t\t\"network\": networkInput.selectedOptionValue\n\t\t}, 'SAME_WINDOW');\n\t\tapis.pageLoad();\n}}",
-    "topRow": 9,
+    "topRow": 4,
     "labelWidth": 5,
     "type": "INPUT_WIDGET_V2",
     "animateLoading": true,
@@ -37,7 +37,7 @@
         "number",
         "textarea"
     ],
-    "bottomRow": 14,
+    "bottomRow": 8,
     "parentRowSpace": 10,
     "autoFocus": false,
     "hideCard": false,

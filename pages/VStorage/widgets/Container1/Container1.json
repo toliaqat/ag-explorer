@@ -12,7 +12,7 @@
         "group"
     ],
     "topRow": 18,
-    "bottomRow": 60,
+    "bottomRow": 62,
     "parentRowSpace": 10,
     "type": "CONTAINER_WIDGET",
     "hideCard": false,
@@ -29,7 +29,7 @@
         "widgetName": "Canvas2",
         "displayName": "Canvas",
         "topRow": 0,
-        "bottomRow": 420,
+        "bottomRow": 440,
         "parentRowSpace": 1,
         "type": "CANVAS_WIDGET",
         "canExtend": false,
@@ -85,6 +85,6 @@
     "borderRadius": "1.5rem",
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 60,
+    "originalBottomRow": 62,
     "minDynamicHeight": 10
 }

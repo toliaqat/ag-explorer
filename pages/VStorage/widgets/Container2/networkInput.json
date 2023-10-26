@@ -32,7 +32,8 @@
     "dynamicPropertyPathList": [
         {"key": "sourceData"},
         {"key": "optionLabel"},
-        {"key": "optionValue"}
+        {"key": "optionValue"},
+        {"key": "onOptionChange"}
     ],
     "displayName": "Select",
     "searchTags": ["dropdown"],
@@ -60,6 +61,6 @@
     "responsiveBehavior": "fill",
     "mobileLeftColumn": 37,
     "maxDynamicHeight": 9000,
-    "onOptionChange": "{{apis.getRpcChildrenLevelOne();}}",
+    "onOptionChange": "{{navigateTo('VStorage', {\n  \"path\": \"\",\n  \"network\": networkInput.selectedOptionValue\n}, 'SAME_WINDOW').then(() => {\n  apis.getRpcChildrenLevelOne();\n  Iframe1.setVisibility(false);\n});}}",
     "minDynamicHeight": 4
 }

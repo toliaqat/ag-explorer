@@ -140,6 +140,7 @@
     "textSize": "0.875rem",
     "widgetId": "k2uv62ekz1",
     "allowAddNewRow": false,
+    "enableServerSideFiltering": false,
     "tableData": "{{apis.getRpcChildrenLevelThree.data}}",
     "label": "Data",
     "searchKey": "",

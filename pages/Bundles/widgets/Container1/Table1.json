@@ -147,6 +147,7 @@
     "rightColumn": 28,
     "textSize": "0.875rem",
     "widgetId": "33akfukzmd",
+    "enableServerSideFiltering": false,
     "minWidth": 450,
     "tableData": "{{apis.getBundleTxs.data}}",
     "label": "Data",

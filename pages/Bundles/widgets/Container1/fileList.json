@@ -140,6 +140,7 @@
     "rightColumn": 28,
     "textSize": "0.875rem",
     "widgetId": "bje37dssm5",
+    "enableServerSideFiltering": false,
     "minWidth": 450,
     "tableData": "{{Iframe1.message.files}}",
     "label": "Data",

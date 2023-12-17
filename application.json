@@ -62,6 +62,9 @@
   },
   "unpublishedCustomJSLibs": [
     {
+      "uidString": "xmlParser_https://cdnjs.cloudflare.com/ajax/libs/fast-xml-parser/3.17.5/parser.min.js"
+    },
+    {
       "uidString": "JsonViewer_https://cdn.jsdelivr.net/npm/@textea/json-viewer@3.1.1/dist/browser.min.js"
     }
   ],

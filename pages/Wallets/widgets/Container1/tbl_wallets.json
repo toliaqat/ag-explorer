@@ -139,6 +139,7 @@
     "textSize": "0.875rem",
     "widgetId": "6s4blzd167",
     "allowAddNewRow": false,
+    "enableServerSideFiltering": false,
     "tableData": "{{apis.getRpcWallets.data}}",
     "label": "Data",
     "searchKey": "",

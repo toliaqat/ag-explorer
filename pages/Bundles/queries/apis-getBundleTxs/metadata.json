@@ -34,7 +34,8 @@
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-12-17T15:09:37Z"
   },
   "id": "Bundles_apis.getBundleTxs",
   "deleted": false,

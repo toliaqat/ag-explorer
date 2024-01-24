@@ -38,7 +38,8 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-12-17T15:09:37Z"
   },
   "id": "Vaults_vaultsApi.cleanTxt",
   "deleted": false,

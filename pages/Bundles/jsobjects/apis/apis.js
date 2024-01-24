@@ -1,7 +1,7 @@
 export default {
 	tx: searchInput.text,
 	apiToRpcEndpoint: {
-    "https://main.api.agoric.net/": "https://agoric.rpc.kjnodes.com/",
+    "https://main.api.agoric.net/": "https://main.rpc.agoric.net/",
 		"https://emerynet.api.agoric.net/": "https://emerynet.rpc.agoric.net/",
 		"https://ollinet.api.agoric.net/": "https://ollinet.rpc.agoric.net/",
 		"https://devnet.api.agoric.net/": "https://devnet.rpc.agoric.net/",

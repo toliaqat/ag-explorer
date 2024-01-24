@@ -62,9 +62,7 @@
                 "async function () {\n  showModal('Modal1');\n  const txs = [];\n  const response = await GetBundleInstallTxs.run();\n  if (!response || !response.result) {\n    closeModal('Modal1');\n    return txs;\n  }\n  for (const tx of response.result.txs) {\n    txs.push({\n      tx: tx.hash,\n      height: tx.height\n    });\n  }\n  closeModal('Modal1');\n  return txs;\n}"
               ],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "Bundles_apis.pageLoad",
               "name": "apis.pageLoad",
@@ -88,7 +86,7 @@
     ],
     "userPermissions": [],
     "policies": [],
-    "isHidden": false
+    "isHidden": true
   },
   "deleted": false,
   "gitSyncId": "650ebdc3f3d421401941b61d_651b0b84338bcc55ca3b16e1"

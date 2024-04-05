@@ -29,6 +29,17 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Bundles_apis.getBundleTxs",
+              "name": "apis.getBundleTxs",
+              "collectionId": "Bundles_apis",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async function () {\n  showModal('Modal1');\n  const txs = [];\n  const response = await GetBundleInstallTxs.run();\n  if (!response || !response.result) {\n    closeModal('Modal1');\n    return txs;\n  }\n  for (const tx of response.result.txs) {\n    txs.push({\n      tx: tx.hash,\n      height: tx.height\n    });\n  }\n  closeModal('Modal1');\n  return txs;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Bundles_apis.getJSONPage",
               "name": "apis.getJSONPage",
               "collectionId": "Bundles_apis",
@@ -49,17 +60,6 @@
               "pluginType": "JS",
               "jsonPathKeys": [
                 "async function () {\n  apis.tx = searchInput.text;\n  if (!searchInput.text) {\n    console.log(`in: ${searchInput.text}`);\n    if (appsmith.URL.queryParams.tx != undefined && appsmith.URL.queryParams.tx != null) {\n      console.log(`innn: ${appsmith.URL.queryParams.tx}`);\n      apis.tx = appsmith.URL.queryParams.tx;\n      searchInput.setValue(appsmith.URL.queryParams.tx);\n    }\n  }\n  if (!searchInput.text) {\n    return false;\n  }\n  let response = await GetTxApi.run();\n  let s = {\n    data: response.tx.body.messages[0].compressed_bundle\n  };\n  postWindowMessage(s, 'Iframe1', \"*\");\n  return true;\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Bundles_apis.getBundleTxs",
-              "name": "apis.getBundleTxs",
-              "collectionId": "Bundles_apis",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async function () {\n  showModal('Modal1');\n  const txs = [];\n  const response = await GetBundleInstallTxs.run();\n  if (!response || !response.result) {\n    closeModal('Modal1');\n    return txs;\n  }\n  for (const tx of response.result.txs) {\n    txs.push({\n      tx: tx.hash,\n      height: tx.height\n    });\n  }\n  closeModal('Modal1');\n  return txs;\n}"
               ],
               "timeoutInMillisecond": 10000
             },

@@ -14,7 +14,7 @@ export default {
 
 	async getRpcData () {
 
-		showModal('Modal1');
+		//showModal('Modal1');
 		Iframe1.setVisibility(true);
 		pathInput.setValue(this.dataPath);
 		navigateTo('VStorage', {
@@ -28,28 +28,28 @@ export default {
 		}
 
 		this.height = response.result.response.height;
-		
+
 		let data = response.result.response.value && JSON.parse(atob(response.result.response.value));
 		let result = JSON.parse((data).value) && JSON.parse((data).value).values.map(v => ({value: (this.cleanTxt(v))})).map(kv => ({ "value": kv.value}));
 		result = { height: response.result.response.height, result };
-		closeModal('Modal1');
+		//closeModal('Modal1');
 
 		return result;
 	},
 
 	async getRpcChildren() {
 		pathInput.setValue(this.path);
-		showModal('Modal1');
+		// showModal('Modal1');
 		let response = await RpcGetChildrenApi.run();
 		this.height = response.result.response.height;
-		
+
 		let children = response.result.response.value && JSON.parse(atob(response.result.response.value)).children;
 		if (children.length === 0 || this.path.match(/published\.wallet\./g)) {
 			this.dataPath = this.path;
 			this.dataPath = this.dataPath.replace("/children/", "/data/");
 
 			await this.getRpcData();
-			closeModal('Modal1');
+			//closeModal('Modal1');
 
 			return [];
 		}
@@ -123,7 +123,7 @@ export default {
 		if (appsmith.URL.queryParams.network) {
 			const networkExists = networkInput.options.some(item => item.value === appsmith.URL.queryParams.network);
 			if (networkExists) {
-					networkInput.setSelectedOption(appsmith.URL.queryParams.network);	
+				networkInput.setSelectedOption(appsmith.URL.queryParams.network);	
 			} 
 		}
 	},

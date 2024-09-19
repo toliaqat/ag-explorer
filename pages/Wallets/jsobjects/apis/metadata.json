@@ -1,11 +1,11 @@
 {
+  "gitSyncId": "650ebdc3f3d421401941b61d_650f72a7d4b5a14eded64c78",
+  "id": "Wallets_apis",
   "unpublishedCollection": {
     "name": "apis",
     "pageId": "Wallets",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
     "variables": [
       {
         "name": "dataPath",
@@ -31,10 +31,6 @@
         "name": "slash",
         "value": "\"\\\\\""
       }
-    ],
-    "userPermissions": []
-  },
-  "id": "Wallets_apis",
-  "deleted": false,
-  "gitSyncId": "650ebdc3f3d421401941b61d_650f72a7d4b5a14eded64c78"
+    ]
+  }
 }

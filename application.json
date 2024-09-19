@@ -1,4 +1,34 @@
 {
+  "appIsExample": false,
+  "appLayout": {
+    "type": "FLUID"
+  },
+  "applicationDetail": {
+    "appPositioning": {
+      "type": "FIXED"
+    },
+    "navigationSetting": {
+      "colorStyle": "theme",
+      "itemStyle": "text",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "navStyle": "sidebar",
+      "orientation": "side",
+      "position": "static",
+      "showNavbar": true,
+      "showSignIn": false
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  },
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "color": "#C7F3E3",
+  "evaluationVersion": 2,
+  "icon": "coding",
   "pages": [
     {
       "id": "VStorage",
@@ -33,45 +63,28 @@
       "isDefault": false
     }
   ],
-  "viewMode": false,
-  "appIsExample": false,
-  "unreadCommentThreads": 0,
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
   "unpublishedApplicationDetail": {
     "appPositioning": {
       "type": "FIXED"
     },
     "navigationSetting": {
-      "showNavbar": true,
-      "orientation": "side",
-      "navStyle": "sidebar",
-      "position": "static",
-      "itemStyle": "text",
       "colorStyle": "theme",
+      "itemStyle": "text",
       "logoAssetId": "",
       "logoConfiguration": "logoAndApplicationTitle",
+      "navStyle": "sidebar",
+      "orientation": "side",
+      "position": "static",
+      "showNavbar": true,
       "showSignIn": false
-    }
-  },
-  "color": "#C7F3E3",
-  "icon": "coding",
-  "unpublishedAppLayout": {
-    "type": "FLUID"
-  },
-  "publishedAppLayout": {
-    "type": "FLUID"
-  },
-  "unpublishedCustomJSLibs": [
-    {
-      "uidString": "xmlParser_https://cdnjs.cloudflare.com/ajax/libs/fast-xml-parser/3.17.5/parser.min.js"
     },
-    {
-      "uidString": "JsonViewer_https://cdn.jsdelivr.net/npm/@textea/json-viewer@3.1.1/dist/browser.min.js"
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
     }
-  ],
-  "publishedCustomJSLibs": [],
-  "evaluationVersion": 2,
-  "applicationVersion": 2,
-  "collapseInvisibleWidgets": true,
-  "isManualUpdate": false,
-  "deleted": false
+  }
 }

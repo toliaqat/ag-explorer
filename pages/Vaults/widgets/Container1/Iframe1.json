@@ -1,43 +1,53 @@
 {
-    "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-    "mobileBottomRow": 141,
-    "widgetName": "Iframe1",
-    "srcDoc": "{{JSONRender.getJSONPage()}}",
-    "displayName": "Iframe",
-    "iconSVG": "/static/media/icon.a84667dbdc548d14f7c83df551151550.svg",
-    "searchTags": ["embed"],
-    "topRow": 38,
-    "bottomRow": 108,
-    "parentRowSpace": 10,
-    "source": "",
-    "type": "IFRAME_WIDGET",
-    "hideCard": false,
-    "mobileRightColumn": 19,
-    "borderOpacity": 100,
-    "animateLoading": true,
-    "parentColumnSpace": 43.515625,
-    "dynamicTriggerPathList": [],
-    "leftColumn": 15,
-    "dynamicBindingPathList": [
-        {"key": "borderRadius"},
-        {"key": "boxShadow"},
-        {"key": "srcDoc"}
-    ],
-    "borderWidth": 1,
-    "key": "llulk4oyv8",
-    "isDeprecated": false,
-    "rightColumn": 64,
-    "widgetId": "n74cysjxdb",
-    "isVisible": true,
-    "version": 1,
-    "parentId": "owcsxdhimw",
-    "tags": ["Display"],
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "mobileTopRow": 109,
-    "responsiveBehavior": "fill",
-    "originalTopRow": 38,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "mobileLeftColumn": 0,
-    "originalBottomRow": 108
+  "animateLoading": true,
+  "borderOpacity": 100,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 1,
+  "bottomRow": 108,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "displayName": "Iframe",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "srcDoc"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.a84667dbdc548d14f7c83df551151550.svg",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "llulk4oyv8",
+  "leftColumn": 15,
+  "mobileBottomRow": 141,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 19,
+  "mobileTopRow": 109,
+  "originalBottomRow": 108,
+  "originalTopRow": 38,
+  "parentColumnSpace": 43.515625,
+  "parentId": "owcsxdhimw",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "embed"
+  ],
+  "source": "",
+  "srcDoc": "{{JSONRender.getJSONPage()}}",
+  "tags": [
+    "Display"
+  ],
+  "topRow": 38,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "n74cysjxdb",
+  "widgetName": "Iframe1"
 }

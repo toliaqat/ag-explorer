@@ -1,11 +1,10 @@
 {
-  "name": "JsonViewer",
-  "uidString": "JsonViewer_https://cdn.jsdelivr.net/npm/@textea/json-viewer@3.1.1/dist/browser.min.js",
   "accessor": [
     "JsonViewer"
   ],
-  "url": "https://cdn.jsdelivr.net/npm/@textea/json-viewer@3.1.1/dist/browser.min.js",
-  "version": "3.1.1",
   "defs": "{\"!name\":\"LIB/JsonViewer\",\"JsonViewer\":{\"!type\":\"fn()\",\"prototype\":{\"render\":{\"!type\":\"fn()\"},\"destroy\":{\"!type\":\"fn()\"}},\"Component\":{\"!type\":\"fn()\",\"prototype\":{}}}}",
-  "deleted": false
+  "name": "JsonViewer",
+  "uidString": "JsonViewer_https://cdn.jsdelivr.net/npm/@textea/json-viewer@3.1.1/dist/browser.min.js",
+  "url": "https://cdn.jsdelivr.net/npm/@textea/json-viewer@3.1.1/dist/browser.min.js",
+  "version": "3.1.1"
 }

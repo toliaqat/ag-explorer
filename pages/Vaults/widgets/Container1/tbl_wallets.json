@@ -1,153 +1,181 @@
 {
-    "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-    "isVisibleDownload": true,
-    "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
-    "topRow": 1,
-    "isSortable": true,
-    "onPageChange": "{{utils.getReturns()}}",
-    "type": "TABLE_WIDGET_V2",
-    "inlineEditingSaveOption": "ROW_LEVEL",
-    "animateLoading": true,
-    "dynamicBindingPathList": [
-        {"key": "accentColor"},
-        {"key": "borderRadius"},
-        {"key": "boxShadow"},
-        {"key": "tableData"},
-        {"key": "primaryColumns.vault.computedValue"}
-    ],
-    "leftColumn": 0,
-    "delimiter": ",",
-    "variant": "VARIANT3",
-    "defaultSelectedRowIndex": "-1",
-    "showInlineEditingOptionDropdown": true,
-    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "isVisibleFilters": true,
-    "isVisible": true,
-    "enableClientSideSearch": false,
-    "version": 1,
-    "totalRecordsCount": "",
-    "isLoading": false,
-    "onSearchTextChanged": "",
-    "childStylesheet": {
-        "button": {
-            "boxShadow": "none",
-            "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-            "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
-        },
-        "iconButton": {
-            "boxShadow": "none",
-            "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-            "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
-        },
-        "menuButton": {
-            "boxShadow": "none",
-            "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-            "menuColor": "{{appsmith.theme.colors.primaryColor}}"
-        },
-        "editActions": {
-            "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-            "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-            "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-            "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}"
-        }
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowAddNewRow": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 107,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "canFreezeColumn": false,
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
     },
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1695613235757,
-    "originalBottomRow": 145,
-    "primaryColumnId": "vault",
-    "defaultSelectedRowIndices": [0],
-    "widgetName": "tbl_wallets",
-    "defaultPageSize": 0,
-    "columnOrder": ["vault"],
-    "dynamicPropertyPathList": [
-        {"key": "tableData"},
-        {"key": "onRowSelected"}
-    ],
-    "compactMode": "DEFAULT",
-    "displayName": "Table",
-    "bottomRow": 107,
-    "columnWidthMap": {
-        "Status": 191,
-        "Order_id": 107,
-        "ReturnedDate": 183,
-        "Description": 130,
-        "Amount": 111,
-        "Quantity": 111,
-        "Product": 179,
-        "ProductID": 60,
-        "CustomerID": 87,
-        "OrderID": 90,
-        "Name": 153,
-        "BillingAddress": 212,
-        "task": 245,
-        "Total": 96,
-        "ShippingAddress": 243,
-        "DeliveryFee": 128,
-        "ReturnOrderID": 109,
-        "step": 62,
-        "id": 60,
-        "SKU": 125,
-        "Stock": 149,
-        "status": 75
+    "editActions": {
+      "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}"
     },
-    "parentRowSpace": 10,
-    "hideCard": false,
-    "onPageSizeChange": "{{utils.getReturns()}}",
-    "parentColumnSpace": 18.1875,
-    "dynamicTriggerPathList": [
-        {"key": "onRowSelected"},
-        {"key": "onPageChange"},
-        {"key": "onPageSizeChange"},
-        {"key": "onSearchTextChanged"}
-    ],
-    "primaryColumns": {"vault": {
-        "computedValue": "{{tbl_wallets.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"vault\"]))}}",
-        "isEditable": false,
-        "alias": "vault",
-        "enableSort": true,
-        "isSaveVisible": true,
-        "id": "vault",
-        "isDisabled": false,
-        "allowSameOptionsInNewRow": true,
-        "validation": {},
-        "isCellVisible": true,
-        "isDerived": false,
-        "textSize": "0.875rem",
-        "allowCellWrapping": false,
-        "index": 0,
-        "isDiscardVisible": true,
-        "isVisible": true,
-        "label": "Vault",
-        "fontStyle": "",
-        "textColor": "",
-        "columnType": "text",
-        "horizontalAlignment": "LEFT",
-        "isCellEditable": false,
-        "width": 150,
-        "enableFilter": true,
-        "sticky": "",
-        "originalId": "vault",
-        "cellBackground": "",
-        "verticalAlignment": "CENTER"
-    }},
-    "onRowSelected": "{{\nvaultsApi.getRpcWalletData();\n\nnavigateTo('Vaults', {\n  \"vaultId\": tbl_wallets.selectedRow.vault,\n  \"network\": networkInput.selectedOptionValue\n}, 'SAME_WINDOW');\n\n}}",
-    "key": "361c7eqfhn",
-    "canFreezeColumn": false,
-    "isDeprecated": false,
-    "rightColumn": 15,
-    "textSize": "0.875rem",
-    "widgetId": "6s4blzd167",
-    "allowAddNewRow": false,
-    "enableServerSideFiltering": false,
-    "tableData": "{{vaultsApi.getRpcWallets.data}}",
-    "label": "Data",
-    "searchKey": "",
-    "parentId": "owcsxdhimw",
-    "serverSidePaginationEnabled": true,
-    "renderMode": "CANVAS",
-    "horizontalAlignment": "LEFT",
-    "isVisibleSearch": false,
-    "originalTopRow": 25,
-    "isVisiblePagination": false,
-    "verticalAlignment": "CENTER"
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "vault"
+  ],
+  "columnUpdatedAt": 1695613235757,
+  "columnWidthMap": {
+    "Amount": 111,
+    "BillingAddress": 212,
+    "CustomerID": 87,
+    "DeliveryFee": 128,
+    "Description": 130,
+    "Name": 153,
+    "OrderID": 90,
+    "Order_id": 107,
+    "Product": 179,
+    "ProductID": 60,
+    "Quantity": 111,
+    "ReturnOrderID": 109,
+    "ReturnedDate": 183,
+    "SKU": 125,
+    "ShippingAddress": 243,
+    "Status": 191,
+    "Stock": 149,
+    "Total": 96,
+    "id": 60,
+    "status": 75,
+    "step": 62,
+    "task": 245
+  },
+  "compactMode": "DEFAULT",
+  "defaultPageSize": 0,
+  "defaultSelectedRowIndex": "-1",
+  "defaultSelectedRowIndices": [
+    0
+  ],
+  "delimiter": ",",
+  "displayName": "Table",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.vault.computedValue"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "onRowSelected"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onRowSelected"
+    },
+    {
+      "key": "onPageChange"
+    },
+    {
+      "key": "onPageSizeChange"
+    },
+    {
+      "key": "onSearchTextChanged"
+    }
+  ],
+  "enableClientSideSearch": false,
+  "enableServerSideFiltering": false,
+  "hideCard": false,
+  "horizontalAlignment": "LEFT",
+  "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
+  "inlineEditingSaveOption": "ROW_LEVEL",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": true,
+  "isVisibleDownload": true,
+  "isVisibleFilters": true,
+  "isVisiblePagination": false,
+  "isVisibleSearch": false,
+  "key": "361c7eqfhn",
+  "label": "Data",
+  "leftColumn": 0,
+  "onPageChange": "{{utils.getReturns()}}",
+  "onPageSizeChange": "{{utils.getReturns()}}",
+  "onRowSelected": "{{\nvaultsApi.getRpcWalletData();\n\nnavigateTo('Vaults', {\n  \"vaultId\": tbl_wallets.selectedRow.vault,\n  \"network\": networkInput.selectedOptionValue\n}, 'SAME_WINDOW');\n\n}}",
+  "onSearchTextChanged": "",
+  "originalBottomRow": 145,
+  "originalTopRow": 25,
+  "parentColumnSpace": 18.1875,
+  "parentId": "owcsxdhimw",
+  "parentRowSpace": 10,
+  "primaryColumnId": "vault",
+  "primaryColumns": {
+    "vault": {
+      "alias": "vault",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{tbl_wallets.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"vault\"]))}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "vault",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Vault",
+      "originalId": "vault",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    }
+  },
+  "renderMode": "CANVAS",
+  "rightColumn": 15,
+  "searchKey": "",
+  "serverSidePaginationEnabled": true,
+  "showInlineEditingOptionDropdown": true,
+  "tableData": "{{vaultsApi.getRpcWallets.data}}",
+  "textSize": "0.875rem",
+  "topRow": 1,
+  "totalRecordsCount": "",
+  "type": "TABLE_WIDGET_V2",
+  "variant": "VARIANT3",
+  "version": 1,
+  "verticalAlignment": "CENTER",
+  "widgetId": "6s4blzd167",
+  "widgetName": "tbl_wallets"
 }

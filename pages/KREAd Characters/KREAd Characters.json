@@ -1,68 +1,32 @@
 {
+  "gitSyncId": "650ebdc3f3d421401941b61d_651a55c7d6360575426e172b",
   "unpublishedPage": {
-    "name": "KREAd Characters",
-    "slug": "kread-characters",
+    "isHidden": true,
     "layouts": [
       {
-        "viewMode": false,
         "dsl": {
-          "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1224,
-          "snapColumns": 64,
-          "detachFromLayout": true,
-          "widgetId": "0",
-          "topRow": 0,
           "bottomRow": 1100,
-          "containerStyle": "none",
-          "snapRows": 99,
-          "parentRowSpace": 1,
-          "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 89,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
           "minHeight": 1010,
           "parentColumnSpace": 1,
-          "dynamicBindingPathList": [],
-          "leftColumn": 0
-        },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "KREAd Characters_apis.getRpcWalletData",
-              "name": "apis.getRpcWalletData",
-              "collectionId": "KREAd Characters_apis",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async function () {\n  showModal('Modal1');\n  if (tbl_wallets.tableData.length < 1) {\n    closeModal('Modal1');\n    return [];\n  }\n  if (tbl_wallets.selectedRowIndex < 0) {\n    closeModal('Modal1');\n    return [];\n  }\n  apis.dataPath = (\"/custom/vstorage/data/published.kread.character.\").concat(tbl_wallets.selectedRow.character);\n  let response = await RpcGetWalletDataAPI.run();\n  if (response.result.response.value === null) {\n    closeModal('Modal1');\n    return [{\n      \"value\": response.result.response.log\n    }];\n  }\n  apis.height = response.result.response.height;\n  let data = response.result.response.value && JSON.parse(atob(response.result.response.value));\n  let result = JSON.parse(data.value).values.map(v => ({\n    value: apis.cleanTxt(v)\n  })).map(kv => ({\n    \"value\": JSON.parse(kv.value)\n  }));\n  console.log(result);\n  closeModal('Modal1');\n  return result;\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "KREAd Characters_apis.getRpcWallets",
-              "name": "apis.getRpcWallets",
-              "collectionId": "KREAd Characters_apis",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async function () {\n  if (searchInput.text.length > 0) {\n    return [{\n      character: searchInput.text\n    }];\n  }\n  let response = await RpcGetWalletApi.run();\n  apis.height = response.result.response.height;\n  let children = response.result.response.value && JSON.parse(atob(response.result.response.value)).children;\n  return children.map(v => ({\n    character: v\n  }));\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
-        "layoutOnLoadActionErrors": [],
-        "validOnPageLoadActions": true,
-        "id": "KREAd Characters",
-        "deleted": false,
-        "policies": [],
-        "userPermissions": []
+          "parentRowSpace": 1,
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 99,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 90,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
       }
     ],
-    "userPermissions": [],
-    "policies": [],
-    "isHidden": true
-  },
-  "deleted": false,
-  "gitSyncId": "650ebdc3f3d421401941b61d_651a55c7d6360575426e172b"
+    "name": "KREAd Characters",
+    "slug": "kread-characters"
+  }
 }

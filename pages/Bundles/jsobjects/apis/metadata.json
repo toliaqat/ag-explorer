@@ -1,11 +1,11 @@
 {
+  "gitSyncId": "650ebdc3f3d421401941b61d_651b0b84338bcc55ca3b16f3",
+  "id": "Bundles_apis",
   "unpublishedCollection": {
     "name": "apis",
     "pageId": "Bundles",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
     "variables": [
       {
         "name": "tx",
@@ -31,10 +31,6 @@
         "name": "slash",
         "value": "\"\\\\\""
       }
-    ],
-    "userPermissions": []
-  },
-  "id": "Bundles_apis",
-  "deleted": false,
-  "gitSyncId": "650ebdc3f3d421401941b61d_651b0b84338bcc55ca3b16f3"
+    ]
+  }
 }

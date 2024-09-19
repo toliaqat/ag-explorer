@@ -1,11 +1,11 @@
 {
+  "gitSyncId": "650ebdc3f3d421401941b61d_651a55c7d6360575426e173d",
+  "id": "KREAd Characters_apis",
   "unpublishedCollection": {
     "name": "apis",
     "pageId": "KREAd Characters",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
     "variables": [
       {
         "name": "dataPath",
@@ -27,10 +27,6 @@
         "name": "slash",
         "value": "\"\\\\\""
       }
-    ],
-    "userPermissions": []
-  },
-  "id": "KREAd Characters_apis",
-  "deleted": false,
-  "gitSyncId": "650ebdc3f3d421401941b61d_651a55c7d6360575426e173d"
+    ]
+  }
 }

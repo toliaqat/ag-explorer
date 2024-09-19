@@ -1,67 +1,79 @@
 {
-    "boxShadow": "none",
-    "iconSVG": "/static/media/icon.f2c34197dbcf03595098986de898928f.svg",
-    "onSubmit": "{{\napis.getRpcChildrenLevelOne();\n}}",
-    "topRow": 8,
-    "tooltip": "",
-    "labelWidth": 5,
-    "type": "INPUT_WIDGET_V2",
-    "animateLoading": true,
-    "resetOnSubmit": false,
-    "leftColumn": 1,
-    "dynamicBindingPathList": [
-        {"key": "accentColor"},
-        {"key": "borderRadius"}
-    ],
-    "labelStyle": "",
-    "inputType": "TEXT",
-    "placeholderText": "Block Height (Optional)",
-    "isDisabled": false,
-    "isRequired": false,
-    "dynamicHeight": "FIXED",
-    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "showStepArrows": false,
-    "isVisible": true,
-    "version": 2,
-    "tags": [
-        "Suggested",
-        "Inputs"
-    ],
-    "isLoading": false,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "mobileBottomRow": 15,
-    "widgetName": "blockHeightInput",
-    "dynamicPropertyPathList": [{"key": "onSubmit"}],
-    "displayName": "Input",
-    "searchTags": [
-        "form",
-        "text input",
-        "number",
-        "textarea"
-    ],
-    "bottomRow": 12,
-    "parentRowSpace": 10,
-    "autoFocus": false,
-    "hideCard": false,
-    "mobileRightColumn": 21,
-    "parentColumnSpace": 14.014404296875,
-    "dynamicTriggerPathList": [{"key": "onSubmit"}],
-    "labelPosition": "Top",
-    "key": "1loe01uzhx",
-    "labelTextSize": "0.875rem",
-    "isDeprecated": false,
-    "rightColumn": 63,
-    "widgetId": "xk9z265b87",
-    "minWidth": 450,
-    "label": "",
-    "parentId": "ngpcfm3i1n",
-    "labelAlignment": "left",
-    "renderMode": "CANVAS",
-    "mobileTopRow": 8,
-    "responsiveBehavior": "fill",
-    "mobileLeftColumn": 1,
-    "maxDynamicHeight": 9000,
-    "iconAlign": "left",
-    "defaultText": "",
-    "minDynamicHeight": 4
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 12,
+  "boxShadow": "none",
+  "defaultText": "",
+  "displayName": "Input",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onSubmit"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSubmit"
+    }
+  ],
+  "hideCard": false,
+  "iconAlign": "left",
+  "iconSVG": "/static/media/icon.f2c34197dbcf03595098986de898928f.svg",
+  "inputType": "TEXT",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "1loe01uzhx",
+  "label": "",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 8,
+  "onSubmit": "{{\napis.getRpcChildrenLevelOne();\n}}",
+  "parentColumnSpace": 14.014404296875,
+  "parentId": "ngpcfm3i1n",
+  "parentRowSpace": 10,
+  "placeholderText": "Block Height (Optional)",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": false,
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "searchTags": [
+    "form",
+    "text input",
+    "number",
+    "textarea"
+  ],
+  "showStepArrows": false,
+  "tags": [
+    "Suggested",
+    "Inputs"
+  ],
+  "tooltip": "",
+  "topRow": 8,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "xk9z265b87",
+  "widgetName": "blockHeightInput"
 }

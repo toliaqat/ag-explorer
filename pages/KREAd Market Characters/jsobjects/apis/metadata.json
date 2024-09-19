@@ -1,11 +1,11 @@
 {
+  "gitSyncId": "650ebdc3f3d421401941b61d_651a97ca6d4ce8695a34ca07",
+  "id": "KREAd Market Characters_apis",
   "unpublishedCollection": {
     "name": "apis",
     "pageId": "KREAd Market Characters",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
     "variables": [
       {
         "name": "dataPath",
@@ -27,10 +27,6 @@
         "name": "slash",
         "value": "\"\\\\\""
       }
-    ],
-    "userPermissions": []
-  },
-  "id": "KREAd Market Characters_apis",
-  "deleted": false,
-  "gitSyncId": "650ebdc3f3d421401941b61d_651a97ca6d4ce8695a34ca07"
+    ]
+  }
 }

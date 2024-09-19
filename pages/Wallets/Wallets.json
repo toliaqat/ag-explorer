@@ -1,69 +1,33 @@
 {
+  "gitSyncId": "650ebdc3f3d421401941b61d_650f72a7d4b5a14eded64c66",
   "unpublishedPage": {
-    "name": "Wallets",
-    "slug": "wallets",
     "customSlug": "wallets",
+    "isHidden": true,
     "layouts": [
       {
-        "viewMode": false,
         "dsl": {
-          "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1224,
-          "snapColumns": 64,
-          "detachFromLayout": true,
-          "widgetId": "0",
-          "topRow": 0,
           "bottomRow": 1320,
-          "containerStyle": "none",
-          "snapRows": 99,
-          "parentRowSpace": 1,
-          "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 89,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
           "minHeight": 1010,
           "parentColumnSpace": 1,
-          "dynamicBindingPathList": [],
-          "leftColumn": 0
-        },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "Wallets_apis.getRpcWalletData",
-              "name": "apis.getRpcWalletData",
-              "collectionId": "Wallets_apis",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async function () {\n  showModal('Modal1');\n  resetWidget(\"tbl_walletsData\", true);\n  if (tbl_wallets.tableData.length < 1) {\n    closeModal('Modal1');\n    return [];\n  }\n  if (tbl_wallets.selectedRowIndex < 0) {\n    closeModal('Modal1');\n    return [];\n  }\n  if (tbl_wallets.selectedRowIndices < 0) {\n    if (appsmith.URL.queryParams.walletId != undefined && appsmith.URL.queryParams.walletId != null) {\n      apis.dataPath = (\"/custom/vstorage/data/published.wallet.\").concat(appsmith.URL.queryParams.walletId).concat(\".current\");\n    }\n  } else {\n    apis.dataPath = (\"/custom/vstorage/data/published.wallet.\").concat(tbl_wallets.selectedRow.wallet).concat(\".current\");\n  }\n  console.log(appsmith.URL.queryParams.walletId);\n  console.log(tbl_wallets.selectedRow.wallet);\n  console.log(apis.dataPath);\n  let response = await RpcGetDataAPI.run();\n  if (response.result.response.value === null) {\n    closeModal('Modal1');\n    return [{\n      \"value\": response.result.response.log\n    }];\n  }\n  apis.height = response.result.response.height;\n  let data = response.result.response.value && JSON.parse(atob(response.result.response.value));\n  let result = JSON.parse(data.value).values.map(v => ({\n    value: apis.cleanTxt(v)\n  })).map(kv => ({\n    \"value\": kv.value\n  }));\n  closeModal('Modal1');\n  return result;\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Wallets_apis.getRpcWallets",
-              "name": "apis.getRpcWallets",
-              "collectionId": "Wallets_apis",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async function () {\n  if (searchInput.text.length > 0) {\n    return [{\n      wallet: searchInput.text\n    }];\n  }\n  let response = await RpcGetChildrenApi.run();\n  apis.height = response.result.response.height;\n  let children = response.result.response.value && JSON.parse(atob(response.result.response.value)).children;\n  apis.walletCount = children.length;\n  return children.map(v => ({\n    wallet: v\n  }));\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
-        "layoutOnLoadActionErrors": [],
-        "validOnPageLoadActions": true,
-        "id": "Wallets",
-        "deleted": false,
-        "policies": [],
-        "userPermissions": []
+          "parentRowSpace": 1,
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 99,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 90,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
       }
     ],
-    "userPermissions": [],
-    "policies": [],
-    "isHidden": true
-  },
-  "deleted": false,
-  "gitSyncId": "650ebdc3f3d421401941b61d_650f72a7d4b5a14eded64c66"
+    "name": "Wallets",
+    "slug": "wallets"
+  }
 }

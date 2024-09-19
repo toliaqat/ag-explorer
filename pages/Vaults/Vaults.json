@@ -1,81 +1,32 @@
 {
+  "gitSyncId": "650ebdc3f3d421401941b61d_6510efdd215ae274c77f7d78",
   "unpublishedPage": {
-    "name": "Vaults",
-    "slug": "vaults",
+    "isHidden": true,
     "layouts": [
       {
-        "viewMode": false,
         "dsl": {
-          "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1224,
-          "snapColumns": 64,
-          "detachFromLayout": true,
-          "widgetId": "0",
-          "topRow": 0,
           "bottomRow": 1350,
-          "containerStyle": "none",
-          "snapRows": 99,
-          "parentRowSpace": 1,
-          "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 89,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
           "minHeight": 1010,
           "parentColumnSpace": 1,
-          "dynamicBindingPathList": [],
-          "leftColumn": 0
-        },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "Vaults_vaultsApi.getRpcWallets",
-              "name": "vaultsApi.getRpcWallets",
-              "collectionId": "Vaults_vaultsApi",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async function () {\n  if (searchInput.text.length > 0) {\n    return [{\n      vault: searchInput.text\n    }];\n  }\n  let response = await RpcGetWalletApi.run();\n  vaultsApi.height = response.result.response.height;\n  let children = response.result.response.value && JSON.parse(atob(response.result.response.value)).children;\n  vaultsApi.listCount = children.length;\n  return children.map(v => ({\n    vault: v\n  }));\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Vaults_vaultsApi.getRpcWalletData",
-              "name": "vaultsApi.getRpcWalletData",
-              "collectionId": "Vaults_vaultsApi",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async function () {\n  showModal('Modal1');\n  if (tbl_wallets.tableData.length < 1) {\n    closeModal('Modal1');\n    return [];\n  }\n  if (tbl_wallets.selectedRowIndex < 0) {\n    closeModal('Modal1');\n    return [];\n  }\n  if (tbl_wallets.selectedRowIndices < 0) {\n    if (appsmith.URL.queryParams.vaultId != undefined && appsmith.URL.queryParams.vaultId != null) {\n      vaultsApi.dataPath = (\"/custom/vstorage/data/published.vaultFactory.managers.manager0.vaults.\").concat(appsmith.URL.queryParams.vaultId);\n    }\n  } else {\n    vaultsApi.dataPath = (\"/custom/vstorage/data/published.vaultFactory.managers.manager0.vaults.\").concat(tbl_wallets.selectedRow.vault);\n  }\n  let response = await RpcGetWalletDataAPI.run();\n  closeModal('Modal1');\n  vaultsApi.height = response.result.response.height;\n  let data = response.result && response.result.response && response.result.response.value && JSON.parse(atob(response.result.response.value));\n  let result = JSON.parse(data.value).values.map(v => ({\n    value: vaultsApi.cleanTxt(v)\n  })).map(kv => ({\n    \"value\": kv.value.body\n  }));\n  return result;\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Vaults_vaultsApi.pageLoad",
-              "name": "vaultsApi.pageLoad",
-              "collectionId": "Vaults_vaultsApi",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async function () {\n  if (appsmith.URL.queryParams.vaultId != undefined && appsmith.URL.queryParams.vaultId != null) {\n    searchInput.setValue(appsmith.URL.queryParams.vaultId);\n  }\n  if (appsmith.URL.queryParams.network != undefined && appsmith.URL.queryParams.network != null) {\n    networkInput.setSelectedOption(appsmith.URL.queryParams.network);\n  }\n  vaultsApi.getRpcWalletData();\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
-        "layoutOnLoadActionErrors": [],
-        "validOnPageLoadActions": true,
-        "id": "Vaults",
-        "deleted": false,
-        "policies": [],
-        "userPermissions": []
+          "parentRowSpace": 1,
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 99,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 90,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
       }
     ],
-    "userPermissions": [],
-    "policies": [],
-    "isHidden": true
-  },
-  "deleted": false,
-  "gitSyncId": "650ebdc3f3d421401941b61d_6510efdd215ae274c77f7d78"
+    "name": "Vaults",
+    "slug": "vaults"
+  }
 }

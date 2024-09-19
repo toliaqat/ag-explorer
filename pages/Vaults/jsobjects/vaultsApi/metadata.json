@@ -1,11 +1,11 @@
 {
+  "gitSyncId": "650ebdc3f3d421401941b61d_6510fe34215ae274c77f7e40",
+  "id": "Vaults_vaultsApi",
   "unpublishedCollection": {
     "name": "vaultsApi",
     "pageId": "Vaults",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
     "variables": [
       {
         "name": "dataPath",
@@ -31,10 +31,6 @@
         "name": "slash",
         "value": "\"\\\\\""
       }
-    ],
-    "userPermissions": []
-  },
-  "id": "Vaults_vaultsApi",
-  "deleted": false,
-  "gitSyncId": "650ebdc3f3d421401941b61d_6510fe34215ae274c77f7e40"
+    ]
+  }
 }

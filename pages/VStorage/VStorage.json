@@ -1,71 +1,33 @@
 {
+  "gitSyncId": "651d0c7d8e99897b73c0ef68_652423b08e99897b73c0f081",
   "unpublishedPage": {
-    "name": "VStorage",
-    "slug": "vstorage",
     "customSlug": "vstorage",
+    "isHidden": false,
     "layouts": [
       {
-        "viewMode": false,
         "dsl": {
-          "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1224,
-          "snapColumns": 64,
-          "detachFromLayout": true,
-          "widgetId": "0",
-          "topRow": 0,
           "bottomRow": 1360,
-          "containerStyle": "none",
-          "snapRows": 99,
-          "parentRowSpace": 1,
-          "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 89,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
           "minHeight": 1010,
           "parentColumnSpace": 1,
-          "dynamicBindingPathList": [],
-          "leftColumn": 0
-        },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "VStorage_apis.getRpcChildrenLevelOne",
-              "name": "apis.getRpcChildrenLevelOne",
-              "collectionId": "VStorage_apis",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async function () {\n  apis.path = \"/custom/vstorage/children/published\";\n  tbl_children1.setSelectedRowIndex(-1);\n  tbl_children2.setData([]);\n  tbl_children3.setData([]);\n  tbl_children4.setData([]);\n  tbl_children5.setData([]);\n  return await apis.getRpcChildren();\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "VStorage_apis.pageLoad",
-              "name": "apis.pageLoad",
-              "collectionId": "VStorage_apis",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async function () {\n  await apis.getRpcChildrenLevelOne();\n  if (appsmith.URL.queryParams.path) {\n    if (appsmith.URL.queryParams.path.match(/\\/data\\//g)) {\n      apis.dataPath = appsmith.URL.queryParams.path;\n      await apis.getRpcData();\n    }\n  }\n  if (appsmith.URL.queryParams.network) {\n    const networkExists = networkInput.options.some(item => item.value === appsmith.URL.queryParams.network);\n    if (networkExists) {\n      networkInput.setSelectedOption(appsmith.URL.queryParams.network);\n    }\n  }\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
-        "layoutOnLoadActionErrors": [],
-        "validOnPageLoadActions": true,
-        "id": "VStorage",
-        "deleted": false,
-        "policies": [],
-        "userPermissions": []
+          "parentRowSpace": 1,
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 99,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 90,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
       }
     ],
-    "userPermissions": [],
-    "policies": [],
-    "isHidden": false
-  },
-  "deleted": false,
-  "gitSyncId": "651d0c7d8e99897b73c0ef68_652423b08e99897b73c0f081"
+    "name": "VStorage",
+    "slug": "vstorage"
+  }
 }
